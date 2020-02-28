@@ -21,6 +21,14 @@
         <h1><%= current_page.data.title %></h1>
       <% end %>
       <%= yield %>
+      <nav>
+        <% if current_page.data.prev %>
+          <a href="<%= current_page.data.prev %>">⇦ Page précedente</a>
+        <% end%>
+        <% if current_page.data.next %>
+          <a href="<%= current_page.data.next %>">Page suivante ⇨</a>
+        <% end%>
+      </nav>
     </main>
     <footer>
       Ce cours est modifiable par tous sur <a href="https://github.com/elegaanz/cours-ocaml">GitHub</a>.

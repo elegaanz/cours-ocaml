@@ -51,3 +51,23 @@ footer {
         color: $white;
     }
 }
+
+main > nav {
+    display: flex;
+
+    a {
+        display: block;
+        padding: 1em;
+        flex: 1;
+        transition: background 0.1s ease-in;
+
+        &:hover {
+            background: transparentize($black, 0.8);
+        }
+
+        &:last-of-type {
+            text-align: right;
+        }
+    }
+
+}
