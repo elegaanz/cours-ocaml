@@ -17,6 +17,9 @@
       <section class="illus" style="background-image: url('/images/<%= current_page.data.illus %>')"></section>
     <% end %>
     <main>
+      <% if not current_page.data.no_title %>
+        <h1><%= current_page.data.title %></h1>
+      <% end %>
       <%= yield %>
     </main>
     <footer>
