@@ -3,14 +3,25 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title || "Middleman" %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><%= current_page.data.title || "Page inconnue" %> ⋅ Cours alternatif d'OCaml</title>
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "site" %>
   </head>
   <body>
-    <%= yield %>
+    <header>
+      <h1><a href="/">Cours alternatif d'OCaml</a></h1>
+      <img src="/images/OCaml.svg" alt="Logo OCaml" style="border: none; width: 50px;" />
+    </header>
+    <% if current_page.data.illus %>
+      <section class="illus" style="background-image: url('/images/<%= current_page.data.illus %>')"></section>
+    <% end %>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      Ce cours est modifiable par tous sur <a href="https://github.com/elegaanz/cours-ocaml">GitHub</a>.
+      Il est sous licence GPLv3.0.
+    </footer>
   </body>
 </html>
