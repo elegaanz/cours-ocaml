@@ -69,5 +69,23 @@ main > nav {
             text-align: right;
         }
     }
+}
 
+pre {
+    padding: 1em;
+}
+
+*:not(pre) > code {
+    background: transparentize(#122b3b, 0.90);
+    padding: 0.2em 0.4em;
+}
+
+table {
+    margin: 2em auto;
+    border-collapse: collapse;
+}
+
+td, th:not(:empty) {
+    padding: 1em;
+    border: 1px solid $black;
 }
