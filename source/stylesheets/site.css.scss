@@ -89,3 +89,17 @@ td, th:not(:empty) {
     padding: 1em;
     border: 1px solid $black;
 }
+
+.toc {
+    list-style-type: upper-roman;
+    font-size: 1.5em;
+    li {
+        padding: 0.5em;
+    }
+}
+
+main img {
+    display: block;
+    margin: 2em auto;
+    max-height: 50vh;
+}
