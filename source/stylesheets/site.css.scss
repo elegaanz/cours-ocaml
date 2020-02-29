@@ -49,6 +49,7 @@ footer {
 
     a, a:visited {
         color: $white;
+        text-decoration: underline;
     }
 }
 
@@ -99,8 +100,24 @@ td, th:not(:empty) {
     }
 }
 
+ol {
+    padding-left: 1em;
+}
+
 main img {
     display: block;
     margin: 2em auto;
     max-height: 50vh;
+    max-width: 90vw;
+}
+
+@media screen and (max-width: 720px) {
+    body > * {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    main {
+        padding: 1em 5vw;
+    }
 }
