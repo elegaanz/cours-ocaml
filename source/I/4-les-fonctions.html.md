@@ -37,7 +37,7 @@ et elle s'avère très pratique quand on commence à faire du OCaml à un niveau
 Si on tape cette commande dans l'interpréteur OCaml, on peut obtenir le type de la fonction :
 
 ```ocaml
-f;;
+f
 ```
 
 On voit donc que cette fonction a un type elle aussi : `int -> int -> int`.
@@ -57,6 +57,24 @@ let f (x : int) (y : int) : int = x + y
 Cette notation est plus longue, mais elle a l'avantage de rendre explicite les types des différentes expressions.
 Ainsi, il est plus simple de raisonner sur cette fonction, car on voit clairement quelles valeurs les arguments
 et la valeur retournée peuvent prendre.
+
+### Petite astuce : les définitions multiples
+
+Vous pouvez aussi définir plusieurs fonctions à la fois, en séparant leur déclarations par un
+`and` (qui n'a rien à voir avec un `&&`, attention) :
+
+```ocaml
+let identite x = x and carre x = x * x and cube x = x * x * x
+```
+
+Mais avec cette syntaxe, on ne peut pas utiliser les fonctions qu'on a défini juste avant dans les définitions de la même ligne.
+Par exemple, on n'aurait pas pu écrire :
+
+```
+let carre x = x * x and cube x = (carre x) * x
+```
+
+Car la fonction `carre` n'existe pas encore vraiment quand on l'utilise dans la définition de `cube`.
 
 ## Appeler une fonction
 
