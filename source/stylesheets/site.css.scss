@@ -121,3 +121,35 @@ main img {
         padding: 1em 5vw;
     }
 }
+
+.quizz {
+    border-left: 3px solid $black;
+    padding-left: 2em;
+    margin: 0px 0px 3em;
+
+    pre {
+        margin-bottom: 0px
+    }
+
+    input {
+        border: 1px solid $black;
+        margin: 0px 0px 1em;
+        padding: 0.5em;
+        width: calc(100% - 1em - 2px);
+
+        &.code {
+            font-family: monospace;
+        }
+
+        &:valid {
+            border-color: green;
+            background: transparentize(green, 0.8);
+        }
+
+        &:invalid {
+            outline: none;
+            border-color: red;
+            background: transparentize(red, 0.8);
+        }
+    }
+}

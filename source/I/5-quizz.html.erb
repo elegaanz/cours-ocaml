@@ -1,0 +1,118 @@
+---
+title: Quizz de fin de chapitre
+prev: '/I/4-les-fonctions'
+next: '/II/1-idk'
+---
+
+<p>
+  Pour voir si vous avez bien compris ce qu'on a expliqué jusque là,
+  vous pouvez essayer de répondre aux questions suivantes.
+  Vos réponses passeront du vert au rouge si elles sont justes.
+</p>
+
+<section class="quizz">
+  Quel est le type de chacune des expressions suivantes ?
+  Si le type n'est pas valide, tapez <code>ERREUR</code>.
+
+  <% code('ocaml') do %>
+2 + 2
+  <% end %>
+  <input type="text" class="code" pattern="int" required>
+
+  <% code('ocaml') do %>
+2e3 +. 2.5 *. (float_of_int 4)
+  <% end %>
+  <input type="text" class="code" pattern="float" required>
+
+  <% code('ocaml') do %>
+'H'
+  <% end %>
+  <input type="text" class="code" pattern="char" required>
+
+  <% code('ocaml') do %>
+12 > 3 && 7
+  <% end %>
+  <input type="text" class="code" pattern="erreur|Erreur|ERREUR" required>
+
+  <% code('ocaml') do %>
+"Bonjour " ^ "toi" ^ " !"
+  <% end %>
+  <input type="text" class="code" pattern="string" required>
+
+  <% code('ocaml') do %>
+42 > 12 || 19 > 38
+  <% end %>
+  <input type="text" class="code" pattern="bool" required>
+
+  <% code('ocaml') do %>
+let plus_grand x y = x > y
+
+plus_grand (* C'est le type de "plus_grand" qu'on demande *)
+  <% end %>
+  <input type="text" class="code" pattern="int ?-> ?int ?-> ?bool" required>
+
+  <% code('ocaml') do %>
+'A' + 3
+  <% end %>
+  <input type="text" class="code" pattern="erreur|Erreur|ERREUR" required>
+
+  <% code('ocaml') do %>
+(* On suppose que 'x' et 'y' sont des constantes définies avant,
+ * mais dont on ne vous donne pas la valeur.
+ *
+ * Aussi : cette expression ne donne pas d'erreur de type.
+ *)
+
+x +. (y *. y)
+  <% end %>
+  <input type="text" class="code" pattern="float" required>
+</section>
+
+<section class="quizz">
+  Les expressions booléennes suivantes sont-elles vraies (<code>true</code>) ou fausses (<code>false</code>) ?
+
+  <% code('ocaml') do %>
+42 > 12 || 19 > 38
+  <% end %>
+  <input type="text" class="code" pattern="true|vrai|Vrai" required>
+
+  <% code('ocaml') do %>
+4 * 5 + 2 = 28
+  <% end %>
+  <input type="text" class="code" pattern="false|faux|Faux" required>
+
+  <% code('ocaml') do %>
+'a' < 'e'
+  <% end %>
+  <input type="text" class="code" pattern="true|vrai|Vrai" required>
+
+  <% code('ocaml') do %>
+let x = 15
+
+x > 2 && x < 17
+  <% end %>
+  <input type="text" class="code" pattern="true|vrai|Vrai" required>
+
+  <% code('ocaml') do %>
+"Zoé" > "Alice"
+  <% end %>
+  <input type="text" class="code" pattern="true|vrai|Vrai" required>
+</section>
+
+<section class="quizz">
+  Que faut-il écrire à la place des <code>______</code> pour que <code>resultat</code> vaille <code>38</code> ?
+
+  <% code('ocaml') do %>
+let ______ = (2 * x * x) + (3 * x) + 11
+
+let resultat = polynome 3
+  <% end %>
+  <input type="text" class="code" pattern="(polynome x)|(polynome \(x ?: ?int\))" required>
+</section>
+
+<p>
+  Une fois que vous avez fini, vous pouvez passer à la suite. Si vous n'avez pas eu juste à beaucoup de questions,
+  le mieux est sans doute de relire le premier chapitre, tout en testant les exemples de code vous même, et en
+  en créant de nouveaux vous même. Si quelque chose ne vous semble pas clair, vous pouvez écrire un mail à
+  <code>ana arobase gelez point xyz</code> pour des explications.
+</p>

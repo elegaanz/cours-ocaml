@@ -1,7 +1,7 @@
 ---
 title: Les fonctions
 illus: math.jpg
-next: ''
+next: '/I/5-quizz'
 prev: '/I/3-plus-de-types'
 ---
 
