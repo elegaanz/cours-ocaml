@@ -33,7 +33,7 @@ Dans cet exemple général, on a :
 
 En effet, en OCaml, toute expression doit avoir un type uniforme et bien défini. Et la structure `if`/`else`
 étant aussi une expression, elle ne peut avoir qu'un seul type. À cause de cette règle, il n'est également pas
-possible d'ignorer le `else` : il est obligatoire. Si on ne le mettait pas, on pourrait avoir un expression qui
+possible d'ignorer le `else` : il est obligatoire. Si on ne le mettait pas, on pourrait avoir une expression qui
 a soit le même type que `a`, soit pas de type (noté `()` en OCaml). Le type ne serait donc pas uniforme.
 
 Le fait que les conditions soient des expressions est parfois très pratique. On peut par exemple définir une
