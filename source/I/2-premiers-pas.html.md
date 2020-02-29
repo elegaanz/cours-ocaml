@@ -49,7 +49,7 @@ En OCaml, tout ou presque est une expression. Mais si on prend l'exemple de Pyth
 12 + 7 # C'est un expression, qui vaut 19 (remarquez qu'elle est composée à partir d'autre expressions plus simple, comme 12 et 7)
 print("Bonjour !") # C'est aussi une expression, même si elle vaut None (soit rien)
 
-a = 12 # Cette ligne n'est pas une expression, "a = 12" n'a pas de valeur, c'est une juste instruction
+a = 12 # Cette ligne n'est pas une expression, "a = 12" n'a pas de valeur, c'est une juste une instruction
 ```
 
 De manière générale, pour savoir si ce que vous avez sous les yeux est une expression, demandez vous :
@@ -63,7 +63,7 @@ z = (a = 12) # Même si ça pourrait sembler logique dans un autre contexte, "a 
 ```
 
 Maintenant, nous allons parler des types. Un **type** est une information sur une expression qui nous renseigne sur les valeurs qu'elle
-peut prendre. C'est un peut comme la notion d'ensemble en mathématiques.
+peut prendre. C'est un peu comme la notion d'ensemble en mathématiques.
 Vous avez sans doute déjà vu quelques types en Python, comme `int` ou, `float` ou `str`. En OCaml, on retrouve aussi des types,
 mais le système de type d'OCaml est bien plus avancé que celui de Python. Et en OCaml, toute expression a un type bien défini : on dit que
 c'est un langage *fortement typé*.

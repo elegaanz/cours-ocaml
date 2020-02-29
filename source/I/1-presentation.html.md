@@ -21,7 +21,7 @@ dans les Universités du monde entier, mais aussi dans les entreprises.
 
 Si vous êtes là, vous avez sans doute suivi l'UE INF101, qui utilise le langage Python pour nous apprendre
 les bases de la programmation. Or Python, du moins dans l'utilisation qui en a été faite, est un langage
-*impératif* (si vous n'avez pas suivi l'UE d'INF201, ce n'est pas grave, la plupart des langages comme C, C++,
+*impératif* (si vous n'avez pas suivi l'UE d'INF101, ce n'est pas grave, la plupart des langages comme C, C++,
 Java, C#, etc. sont aussi plus ou moins impératifs). Un langage impératif a une certaine approche pour résoudre
 un problème donné, qu'on ne pourra pas réutiliser avec les langages fonctionnels.
 
@@ -29,7 +29,7 @@ En effet, dans un langage fonctionnel, tout tourne autour des fonctions (quelle 
 Ainsi, on essaie au maximum de manipuler les données et de résoudre nos problèmes en utilisant des fonctions.
 Concrètement, ça veut par exemple dire qu'on ne pourra pas utiliser de boucles.
 
-J'imagine que vous vous demandez comment est qu'on peut arriver à faire de vrais programmes sans boucles,
+J'imagine que vous vous demandez comment on peut arriver à réaliser de vrais programmes sans boucles,
 mais ne vous inquiétez pas, il existe d'autres moyens de faire la même chose, juste avec des fonctions !
 
 L'approche fonctionnelle peut sembler étrange, voire incompréhensible au début. Mais c'est une question d'habitude,

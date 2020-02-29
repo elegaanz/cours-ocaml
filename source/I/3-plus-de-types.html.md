@@ -40,7 +40,7 @@ mais pas un `int` et un `float`).
 
 ## Le texte
 
-En OCaml, une distinction est faite entre un caractère seul et une châine de caractères.
+En OCaml, une distinction est faite entre un caractère seul et une chaîne de caractères.
 
 - les premiers, de type `char` s'écrivent entre guillemets simples : `'a'` ;
 - les seconds, sont de type `string` et s'écrivent avec des guillemets doubles : `"Bonjour !"`.
