@@ -36,7 +36,8 @@ Et enfin, sans doute ce qui va être le plus perturbant dans un premier temps : 
 avec des nombres flottants (les nombres à virgule). Si vous tapez ce calcul par exemple, vous aurez une erreur :
 
 ```ocaml
-2.8 + 0.2;;
+(* À partir de maintenant, je n'écrirais plus les ;; mais pensez à les mettre si besoin *)
+2.8 + 0.2
 ```
 
 Pour comprendre pourquoi nous avons cette erreur, il va falloir se pencher sur la définition d'une expression, et sur celle d'un type.
