@@ -70,7 +70,7 @@ let identite x = x and carre x = x * x and cube x = x * x * x
 Mais avec cette syntaxe, on ne peut pas utiliser les fonctions qu'on a défini juste avant dans les définitions de la même ligne.
 Par exemple, on n'aurait pas pu écrire :
 
-```
+```ocaml
 let carre x = x * x and cube x = (carre x) * x
 ```
 
@@ -177,6 +177,6 @@ ajouter_deux(5)
 ```
 
 Si vous n'avez pas totalement compris cette dernière partie, ce n'est pas très grave. La curryfication n'est pas simple à
-comprendre du premier coup, même si elle peut aider à mieux comprendre le fonctionnement d'OCaml.
+saisir du premier coup, même si elle peut aider à mieux comprendre le fonctionnement d'OCaml.
 
 [^refs]: En réalité, le concept de *référence* y correspond à peu près, mais on évite de l'utiliser, et nous n'en parlerons pas dans ce cours.
