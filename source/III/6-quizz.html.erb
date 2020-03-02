@@ -1,0 +1,89 @@
+---
+title: Quizz de fin de chapitre
+prev: '/III/5-types-structures'
+---
+
+<p>
+  Voici un petit quizz pour voir si vous avez compris le chapitre sur les types.
+  Comme pour ceux d'avant, vos réponses deviendront vertes dès qu'elles sont justes.
+</p>
+
+<section class="quizz">
+  <p>On définit ces types :</p>
+
+  <% code('ocaml') do %>
+(* On modélise un emploi du temps *)
+
+type ue =
+  | Inf201
+  | Inf203
+  | Mat201
+  | Mat203
+  | Phy201
+  | Phy202
+  | Pause
+
+type horaire = int * int (* heure et minute *)
+type cours = horaire * horaire * ue (* heure de début et de fin, UE *)
+  <% end %>
+
+  <p>Quel est le type des expressions suivantes (seule la version la plus « simple » sera acceptée) ?</p>
+
+  <% code('ocaml') do %>
+Mat201
+  <% end %>
+  <input class="code" type="text" pattern="ue" required>
+
+  <% code('ocaml') do %>
+((13, 30), (15, 00), Inf201)
+  <% end %>
+  <input class="code" type="text" pattern="cours" required>
+
+  <% code('ocaml') do %>
+(13, 30, 00)
+  <% end %>
+  <input class="code" type="text" pattern="int *\* *int *\* *int" required>
+
+  <% code('ocaml') do %>
+'Z'
+  <% end %>
+  <input class="code" type="text" pattern="char" required>
+
+  <% code('ocaml') do %>
+(15, 32)
+  <% end %>
+  <input class="code" type="text" pattern="int *\* *int" required>
+</section>
+
+<section class="quizz">
+  <p>Que faut-il écrire à la place des <code>______</code> pour que ce code soit correct ?</p>
+
+  <% code('ocaml') do %>
+type tram = A | B | C | D | E
+type transport =
+  | Bus of int (* numero de ligne *)
+  | Tram of ______
+  | ______
+  | ______
+
+let nom_tram (t : tram) : string =
+  match t with
+  | A -> "A"
+  | B -> "B"
+  | C -> "C"
+  | D -> "D"
+  | E -> "E"
+
+let nom_transport (tra : transport) : string =
+  match tra with
+  | Bus(ligne) -> "Ligne " ^ (string_of_int ligne) ^ " de bus"
+  | Tram(t) -> "Tram " ^ (nom_tram t)
+  | Voiture -> "Voiture"
+  | Velo -> "Velo"
+  <% end %>
+  <input class="code" type="text" pattern="tram" required>
+  <p>Puis : </p>
+  <input class="code" type="text" pattern="Voiture" required>
+  <p>Et enfin :</p>
+  <input class="code" type="text" pattern="Velo" required>
+</section>

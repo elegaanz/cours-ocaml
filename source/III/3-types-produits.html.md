@@ -1,7 +1,7 @@
 ---
 title: Les types produits
 prev: '/III/2-types-produits'
-next: '/III/3-types-sommes'
+next: '/III/4-types-sommes'
 ---
 
 Nous allons maintenant voir un autre type de types (🤔️) : les types produits.
@@ -45,9 +45,14 @@ let (heures, minutes, secondes) = fin_des_cours
 ```
 
 Remarquez aussi que les parenthèses sont en réalité optionelles quand on construit ou déconstruit
-ces types, mais on les met en général pour plus de clarté.
+ces types, mais on les met en général pour plus de clarté, et moins d'ambiguïté, aussi bien pour nous
+que pour le compilateur OCaml.
 
-TODO : decons args
+La déconstruction peut aussi être utilisée directement dans les arguments d'une fonction :
+
+```
+let ajouter_une_heure (heure, minutes, secondes : temps) = (heure + 1, minutes, secondes)
+```
 
 On peut aussi utiliser la déconstruction pour les cas d'un pattern-matching :
 
@@ -63,7 +68,7 @@ let repas (heure : temps) : string =
 
 Et les comparaisons fonctionnent aussi, on peut donc utiliser des `if` avec une valeur de type produit :
 
-```
+```ocaml
 (* Un couple nom + mot de passe *)
 type identifiants = string * string
 
