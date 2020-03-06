@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg4867"
+   sodipodi:docname="lebochemadeclara.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:export-filename="/home/ana/Projects/cours-ocaml/source/images/lebochemadeclara.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs4861">
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible;"
+       id="marker7876"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path7874" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker7772"
+       style="overflow:visible;"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path7770"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible;"
+       id="marker7712"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path7710" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path5610"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend-0"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5610-2"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker7876-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path7874-5" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker7876-71"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path7874-1" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker7876-71-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path7874-1-1" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker7876-71-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend">
+      <path
+         inkscape:connector-curvature="0"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path7874-1-6" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-205.19941"
+     inkscape:cy="112.73121"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4864">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffd42a;fill-opacity:1;stroke-width:0.2606411"
+       id="rect4869"
+       width="88.068443"
+       height="24.190475"
+       x="29.276785"
+       y="19.1875" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="51.022964"
+       y="35.062866"
+       id="text4873"><tspan
+         sodipodi:role="line"
+         id="tspan4871"
+         x="51.022964"
+         y="35.062866"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">somme 3</tspan></text>
+    <rect
+       style="fill:#ffd42a;fill-opacity:1;stroke-width:0.48841441"
+       id="rect4869-9"
+       width="127.31374"
+       height="58.759834"
+       x="10"
+       y="47.724701" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="13.792309"
+       y="60.009296"
+       id="text4873-7"><tspan
+         sodipodi:role="line"
+         id="tspan4871-5"
+         x="13.792309"
+         y="60.009296"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">n = 3</tspan><tspan
+         sodipodi:role="line"
+         x="13.792309"
+         y="73.238464"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.26458332"
+         id="tspan4898">Donc cas récursif</tspan><tspan
+         sodipodi:role="line"
+         x="13.792309"
+         y="86.791664"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332"
+         id="tspan4902">n + (somme (n - 1))</tspan><tspan
+         sodipodi:role="line"
+         x="13.792309"
+         y="100.18924"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332"
+         id="tspan4904">3 + (somme 2)</tspan></text>
+    <rect
+       style="fill:#ffdd55;fill-opacity:1;stroke-width:0.2606411"
+       id="rect4869-1"
+       width="88.068443"
+       height="24.190475"
+       x="29.325266"
+       y="127.86339" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="51.071449"
+       y="143.73875"
+       id="text4873-9"><tspan
+         sodipodi:role="line"
+         id="tspan4871-0"
+         x="51.071449"
+         y="143.73875"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">somme 2</tspan></text>
+    <rect
+       style="fill:#ffdd55;fill-opacity:1;stroke-width:0.48841441"
+       id="rect4869-9-9"
+       width="127.31375"
+       height="58.759834"
+       x="10.048483"
+       y="156.40059" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="13.840792"
+       y="168.68518"
+       id="text4873-7-8"><tspan
+         sodipodi:role="line"
+         id="tspan4871-5-8"
+         x="13.840792"
+         y="168.68518"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">n = 2</tspan><tspan
+         sodipodi:role="line"
+         x="13.840792"
+         y="181.91435"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.26458332"
+         id="tspan4898-5">Donc cas récursif</tspan><tspan
+         sodipodi:role="line"
+         x="13.840792"
+         y="195.46754"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332"
+         id="tspan4902-8">n + (somme (n - 1))</tspan><tspan
+         sodipodi:role="line"
+         x="13.840792"
+         y="208.86513"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332"
+         id="tspan4904-4">2 + (somme 1)</tspan></text>
+    <rect
+       style="fill:#ffe680;fill-opacity:1;stroke-width:0.2606411"
+       id="rect4869-1-3"
+       width="88.068443"
+       height="24.190475"
+       x="29.276796"
+       y="237.28749" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="51.022972"
+       y="253.16286"
+       id="text4873-9-7"><tspan
+         sodipodi:role="line"
+         id="tspan4871-0-1"
+         x="51.022972"
+         y="253.16286"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">somme 1</tspan></text>
+    <rect
+       style="fill:#ffe680;fill-opacity:1;stroke-width:0.48841441"
+       id="rect4869-9-9-3"
+       width="127.31375"
+       height="58.759834"
+       x="10"
+       y="265.82471" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="13.79232"
+       y="278.10928"
+       id="text4873-7-8-8"><tspan
+         sodipodi:role="line"
+         id="tspan4871-5-8-0"
+         x="13.79232"
+         y="278.10928"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">n = 1</tspan><tspan
+         sodipodi:role="line"
+         x="13.79232"
+         y="291.33844"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.26458332"
+         id="tspan4898-5-9">Donc cas récursif</tspan><tspan
+         sodipodi:role="line"
+         x="13.79232"
+         y="304.89166"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332"
+         id="tspan4902-8-7">n + (somme (n - 1))</tspan><tspan
+         sodipodi:role="line"
+         x="13.79232"
+         y="318.28922"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332"
+         id="tspan4904-4-9">1 + (somme 0)</tspan></text>
+    <rect
+       style="fill:#ffeeaa;fill-opacity:1;stroke-width:0.2606411"
+       id="rect4869-1-9"
+       width="88.068443"
+       height="24.190475"
+       x="29.276783"
+       y="348.65616" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="51.022968"
+       y="364.53152"
+       id="text4873-9-3"><tspan
+         sodipodi:role="line"
+         id="tspan4871-0-2"
+         x="51.022968"
+         y="364.53152"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">somme 0</tspan></text>
+    <rect
+       style="fill:#ffeeaa;fill-opacity:1;stroke-width:0.41971278"
+       id="rect4869-9-9-4"
+       width="127.31375"
+       height="43.391838"
+       x="10"
+       y="377.19336" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="13.792308"
+       y="389.47797"
+       id="text4873-7-8-3"><tspan
+         sodipodi:role="line"
+         id="tspan4871-5-8-7"
+         x="13.792308"
+         y="389.47797"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">n = 0</tspan><tspan
+         sodipodi:role="line"
+         x="13.792308"
+         y="402.70712"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.26458332"
+         id="tspan4898-5-1">Donc cas de base</tspan><tspan
+         sodipodi:role="line"
+         x="13.792308"
+         y="416.26035"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332"
+         id="tspan4904-4-2">0</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.565;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="m 73.517865,106.48454 -0.101151,21.37885"
+       id="path5062"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-end="#rect4869-1"
+       inkscape:connection-start="#rect4869-9" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.565;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7712)"
+       d="m 73.5232,215.16042 -0.13719,22.12707"
+       id="path7702"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect4869-9-9"
+       inkscape:connection-end="#rect4869-1-3" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.66500002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7772)"
+       d="m 73.501846,324.58454 -0.127018,24.07162"
+       id="path7762"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#rect4869-9-9-3"
+       inkscape:connection-end="#rect4869-1-9" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.66500002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7876)"
+       d="m 137.63843,411.65863 c 71.36097,-25.65787 75.63728,-79.11177 0.53455,-96.21703"
+       id="path7866"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:#80e5ff;fill-opacity:1;stroke-width:0.66499996;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect7966"
+       width="78.042702"
+       height="25.925144"
+       x="153.62634"
+       y="350.26669" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="189.47476"
+       y="367.01456"
+       id="text7970"><tspan
+         sodipodi:role="line"
+         id="tspan7968"
+         x="189.47476"
+         y="367.01456"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">0</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.66500002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7876-7)"
+       d="m 137.64381,315.4416 c 71.36097,-25.65787 76.03157,-89.74896 0.92884,-106.85422"
+       id="path7866-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:#80e5ff;fill-opacity:1;stroke-width:0.66499996;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect7966-7"
+       width="78.042702"
+       height="25.925144"
+       x="154.55519"
+       y="243.41248" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="164.28249"
+       y="260.16034"
+       id="text7970-4"><tspan
+         sodipodi:role="line"
+         id="tspan7968-1"
+         x="164.28249"
+         y="260.16034"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">1 + 0 = 1</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.66500002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7876-71)"
+       d="m 138.57265,208.58738 c 71.36097,-25.65787 74.83546,-95.14795 -0.26727,-112.253205"
+       id="path7866-17"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:#80e5ff;fill-opacity:1;stroke-width:0.66499996;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect7966-0"
+       width="78.042702"
+       height="25.925144"
+       x="154.28792"
+       y="131.15927" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="164.79164"
+       y="147.90196"
+       id="text7970-40"><tspan
+         sodipodi:role="line"
+         id="tspan7968-8"
+         x="164.79164"
+         y="147.90196"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">2 + 1 = 3</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.66500002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker7876-71-3)"
+       d="m 138.03796,96.154076 c 50.76128,-1.84537 54.09264,-7.107311 55.71907,-86.5786365"
+       id="path7866-17-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:#80e5ff;fill-opacity:1;stroke-width:0.66499996;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect7966-0-5"
+       width="78.042702"
+       height="25.925144"
+       x="148.88541"
+       y="40.053814" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="159.38913"
+       y="56.796497"
+       id="text7970-40-3"><tspan
+         sodipodi:role="line"
+         id="tspan7968-8-5"
+         x="159.38913"
+         y="56.796497"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">3 + 3 = 6</tspan></text>
+    <rect
+       id="rect238"
+       width="77.485115"
+       height="23.8125"
+       x="149.63306"
+       y="-15.527797"
+       style="fill:#7fff2a;stroke-width:0.23183753" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="156.23546"
+       y="0.38079283"
+       id="text242"><tspan
+         sodipodi:role="line"
+         id="tspan240"
+         x="156.23546"
+         y="0.38079283"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.26458332">Résultat final</tspan></text>
+  </g>
+</svg>

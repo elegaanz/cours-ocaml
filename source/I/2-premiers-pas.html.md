@@ -76,7 +76,7 @@ opérateurs différents : `+.`, `-.`, `*.`, `/.` et `mod_float`.
 Mais pourquoi s'embêter avec tout ça ? Python arrive très bien à mélanger les deux, pourquoi OCaml ne peut pas le faire ?
 
 OCaml accorde une grande importance aux types, et il a tout le temps besoin de savoir quel est le type d'une expression.
-Il ne peut pas être dans le flou. Ainsi, il peut s'assurer **avant même que vous lanciez votre code** si il contient des erreurs.
+Il ne peut pas être dans le flou. Ainsi, il peut s'assurer **avant même que vous lanciez votre code** qu'il ne contient pas d'erreurs.
 Prenons le code suivant en Python :
 
 ```python

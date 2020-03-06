@@ -97,19 +97,19 @@ let div (x : float) (d : float) : resultat =
   if d = 0.0 then
     Erreur (* Division par 0 impossible *)
   else
-    Ok(x /. d) (* C'est ici qu'on crée utilise notre constructeur avec des données associées *)
+    Ok(x /. d) (* C'est ici qu'on utilise notre constructeur avec des données associées *)
 ```
 
-On peut aussi déconstruire les valeurs de ce genre de constructeurs, et donc les utiliser du
+On peut aussi déconstruire les valeurs de ce genre de constructeurs, et donc les utiliser avec du
 pattern-matching :
 
 
 ```ocaml
-let ma_divsion = div 5. 2.
+let ma_division = div 5. 2.
 
-(* ma_divsion est de type resultat, donc on ne peut pas récupérer la valeur potentielle sans gérer
+(* ma_division est de type resultat, donc on ne peut pas récupérer la valeur potentielle sans gérer
  * le cas où on a eu une Erreur. On peut donc être sûr que notre programme ne plantera pas. *)
-match ma_divsion with
+match ma_division with
 | Ok(res) -> "5 divisé par 2 donne : " ^ (string_of_float res)
 | Erreur -> "On ne peut pas faire cette division !"
 ```

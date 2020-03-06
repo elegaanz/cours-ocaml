@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="280mm"
+   height="300mm"
+   viewBox="0 0 280 300"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="recurs1.svg"
+   inkscape:export-filename="/home/ana/Projects/cours-ocaml/source/images/recurs1.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="602.15511"
+     inkscape:cy="251.92987"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:snap-bbox="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-object-midpoints="true"
+     showguides="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid16" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,3)">
+    <rect
+       id="rect10"
+       width="148.545"
+       height="25.872892"
+       x="15"
+       y="23.921045"
+       style="fill:#aad400;stroke-width:0.27994496" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="22.005241"
+       y="40.637623"
+       id="text14"><tspan
+         sodipodi:role="line"
+         id="tspan12"
+         x="22.005241"
+         y="40.637623"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">somme 3</tspan></text>
+    <rect
+       id="rect10-7"
+       width="148.54465"
+       height="59.722786"
+       x="15"
+       y="49.793938"
+       style="fill:#aad400;stroke-width:0.42532375" />
+    <rect
+       id="rect10-73"
+       width="63.254272"
+       height="17.403481"
+       x="57.645187"
+       y="92.113243"
+       style="fill:#ff9955;stroke-width:0.14982495" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="23.400377"
+       y="62.644211"
+       id="text14-8"><tspan
+         sodipodi:role="line"
+         id="tspan12-9"
+         x="23.400377"
+         y="62.644211"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">n = 3</tspan><tspan
+         sodipodi:role="line"
+         x="23.400377"
+         y="75.873375"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.26458332"
+         id="tspan3757">Donc, cas récursif :</tspan><tspan
+         sodipodi:role="line"
+         x="23.400377"
+         y="89.426582"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332"
+         id="tspan3759">  n + (somme (n - 1))</tspan><tspan
+         sodipodi:role="line"
+         x="23.400377"
+         y="102.65575"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332"
+         id="tspan3761">  3 + (somme 2)</tspan></text>
+    <rect
+       id="rect10-7-4"
+       width="148.54465"
+       height="59.72279"
+       x="57.645187"
+       y="109.51672"
+       style="fill:#ff9955;stroke-width:0.42532375" />
+    <rect
+       id="rect10-73-0"
+       width="63.254276"
+       height="17.403481"
+       x="100.29037"
+       y="151.83604"
+       style="fill:#ffd42a;stroke-width:0.14982496" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="66.045563"
+       y="122.36701"
+       id="text14-8-6"><tspan
+         sodipodi:role="line"
+         id="tspan12-9-4"
+         x="66.045563"
+         y="122.36701"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">n = 2</tspan><tspan
+         sodipodi:role="line"
+         x="66.045563"
+         y="135.59618"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.26458332"
+         id="tspan3757-7">Donc, cas récursif :</tspan><tspan
+         sodipodi:role="line"
+         x="66.045563"
+         y="149.14938"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332"
+         id="tspan3759-4">  n + (somme (n - 1))</tspan><tspan
+         sodipodi:role="line"
+         x="66.045563"
+         y="162.37854"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332"
+         id="tspan3761-8">  2 + (somme 1)</tspan></text>
+    <rect
+       id="rect10-7-5"
+       width="148.54465"
+       height="59.72279"
+       x="100.29037"
+       y="169.23953"
+       style="fill:#ffd42a;stroke-width:0.42532375" />
+    <rect
+       id="rect10-73-8"
+       width="63.254276"
+       height="17.403481"
+       x="142.93556"
+       y="211.55884"
+       style="fill:#87decd;stroke-width:0.14982496" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="108.69074"
+       y="182.08978"
+       id="text14-8-2"><tspan
+         sodipodi:role="line"
+         id="tspan12-9-6"
+         x="108.69074"
+         y="182.08978"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">n = 1</tspan><tspan
+         sodipodi:role="line"
+         x="108.69074"
+         y="195.31895"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.26458332"
+         id="tspan3757-0">Donc, cas récursif :</tspan><tspan
+         sodipodi:role="line"
+         x="108.69074"
+         y="208.87215"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332"
+         id="tspan3759-6">  n + (somme (n - 1))</tspan><tspan
+         sodipodi:role="line"
+         x="108.69074"
+         y="222.10132"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332"
+         id="tspan3761-6">  1 + (somme 0)</tspan></text>
+    <rect
+       id="rect10-7-46"
+       width="105.89945"
+       height="47.428391"
+       x="142.93556"
+       y="228.96231"
+       style="fill:#87decd;stroke-width:0.32002738" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="148.60394"
+       y="243.07062"
+       id="text14-8-8"><tspan
+         sodipodi:role="line"
+         id="tspan12-9-9"
+         x="148.60394"
+         y="243.07062"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">n = 0</tspan><tspan
+         sodipodi:role="line"
+         x="148.60394"
+         y="256.29977"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.26458332"
+         id="tspan3761-7">Donc, cas de base : </tspan><tspan
+         sodipodi:role="line"
+         x="148.60394"
+         y="269.853"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332"
+         id="tspan3877">  0</tspan></text>
+    <rect
+       id="rect10-0"
+       width="42.645187"
+       height="166.87398"
+       x="15"
+       y="109.51672"
+       style="fill:#aad400;stroke-width:0.38093466" />
+    <rect
+       id="rect10-0-1"
+       width="42.645203"
+       height="107.15117"
+       x="57.64518"
+       y="169.23953"
+       style="fill:#ff9955;fill-opacity:1;stroke-width:0.30524933" />
+    <rect
+       id="rect10-0-0"
+       width="42.645187"
+       height="47.428391"
+       x="100.29038"
+       y="228.96231"
+       style="fill:#ffd42a;fill-opacity:1;stroke-width:0.20308384" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="23.4"
+       y="162.89133"
+       id="text4790"><tspan
+         sodipodi:role="line"
+         id="tspan4788"
+         x="23.4"
+         y="162.89133"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">  3 +</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="66.045998"
+       y="222.91698"
+       id="text4790-3"><tspan
+         sodipodi:role="line"
+         id="tspan4788-7"
+         x="66.045998"
+         y="222.91698"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">  2 +</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="108.691"
+       y="269.78613"
+       id="text4790-8"><tspan
+         sodipodi:role="line"
+         id="tspan4788-8"
+         x="108.691"
+         y="269.78613"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">  1 +</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="66.045998"
+       y="270.01294"
+       id="text4790-6"><tspan
+         sodipodi:role="line"
+         id="tspan4788-0"
+         x="66.045998"
+         y="270.01294"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">  2 +</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="23.4"
+       y="269.89954"
+       id="text4790-4"><tspan
+         sodipodi:role="line"
+         id="tspan4788-6"
+         x="23.4"
+         y="269.89954"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">  3 +</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="23.4"
+       y="222.0854"
+       id="text4790-7"><tspan
+         sodipodi:role="line"
+         id="tspan4788-60"
+         x="23.4"
+         y="222.0854"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332">  3 +</tspan></text>
+  </g>
+</svg>

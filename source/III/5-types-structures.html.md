@@ -56,7 +56,7 @@ let { nom = nom_de_manon ; age = age_de_manon } = manon
 Et comme on peut déconstruire ces valeurs, on peut aussi matcher dessus :
 
 ```ocaml
-let sapelle_manon (cont : contact) : bool =
+let sappelle_manon (cont : contact) : bool =
   match cont witt
   | { prenom = "Manon" } -> true
   | _ -> false

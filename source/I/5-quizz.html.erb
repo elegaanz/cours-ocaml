@@ -45,11 +45,11 @@ next: '/II/1-conditions'
   <input type="text" class="code" pattern="bool" required>
 
   <% code('ocaml') do %>
-let plus_grand x y = x > y
+let ajouter x y = x + y
 
-plus_grand (* C'est le type de "plus_grand" qu'on demande *)
+ajouter (* C'est le type de "ajouter" qu'on demande *)
   <% end %>
-  <input type="text" class="code" pattern="int ?-> ?int ?-> ?bool" required>
+  <input type="text" class="code" pattern="int ?-> ?int ?-> ?int" required>
 
   <% code('ocaml') do %>
 'A' + 3

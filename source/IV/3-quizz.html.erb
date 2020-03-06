@@ -1,0 +1,92 @@
+---
+title: Quizz de fin de chapitre
+next: '/V/1-ecrire-une-specification'
+prev: '/IV/2-types-recursifs'
+---
+
+<p>
+  Après ces deux petites pages, voici un quizz pour vous tester.
+  Comme avant, les réponses deviennent vertes aussitôt qu'elles sont justes.
+</p>
+
+<section class="quizz">
+  <p>Sachant qu'on défini les types suivants :</p>
+
+  <% code('ocaml') do %>
+type itineraire =
+  | Arrive
+  | Prendre of string * itineraire
+
+type recette =
+  | Degustation
+  | Cuisson of int * recette (* le int correspond au temps de cuisson *)
+  | Instruction of string * recette
+  | PrendreIngredient of string * recette
+  <% end %>
+  <p>Complétez ces fonctions récursives :</p>
+
+  <% code('ocaml') do %>
+(* Donne une version lisible par un humain d'un itinéraire.
+*
+* Exemple :
+*
+* afficher(Prendre("rue de Mathématiques", Prendre("rue de la Physique", Arrive)))
+* = "prendra la rue des Mathématiques, puis la rue de la Physique, puis vous êtes arrivés."
+*)
+let rec afficher (i : itineraire) : string =
+  match i with
+  | Arrive -> "vous êtes arrivés."
+  | ______(nom_route, suite) -> "prendre la " ^ nom_route ^ ", puis " ^ ______
+  <% end %>
+  <input class="code" type="text" pattern=" *Prendre *" required>
+  <input class="code" type="text" pattern=" *afficher +suite *" required>
+
+  <% code('ocaml') do %>
+let rec compter_etapes (r : recette) : int =
+  match r with
+  | PrendreIngredient(_, s), Instruction(_, s) | Cuisson(_, s) -> ______
+  | Degustation -> 0 (* La dégustation ne compte pas vraiment comme une étape *)
+  <% end %>
+  <input class="code" type="text" pattern=" *(1 *\+ *\(?compter_etapes s\)?)|(\(? *compter_etapes s\)? *\+ *1) *" required>
+
+  <% code('ocaml') do %>
+(* Fait la somme des temps de cuisson, au cas où il y en auraient plusieurs *)
+let rec cuisson_total (r : recette) : int =
+  match r with
+  | ______ -> 0
+  | Cuisson(temps, s) -> ______
+  | Instruction(_, s) | PrendreIngredient(_, s) -> cuisson_total s
+  <% end %>
+  <input class="code" type="text" pattern=" *Degustation *" required>
+  <input class="code" type="text" pattern=" *(temps *\+ *\(?cuisson_total s\)?)|(\(? *cuisson_total s\)? *\+ *temps) *" required>
+</section>
+
+<section class="quizz">
+  <p>
+    On veut écrire un type récursif pour modéliser une grotte, et ensuite écrire un algorithme pour trouver une sortie.
+    On a donc trois types de « chemins » :
+    <ul>
+      <li>un cul-de-sac ;</li>
+      <li>une sortie ;</li>
+      <li>un embranchement, avec un chemin à gauche et un à droite.</li>
+    </ul>
+
+    Complétez la définition du type somme correspondant.
+  </p>
+  <% code('ocaml') do %>
+type grotte =
+  | ______
+  | ______
+  | ______ of ______
+
+(* Sachant qu'on a ensuite cette fonction : *)
+let fin_de_la_grotte (gro : grotte) : bool =
+  match gro with
+  | CulDeSac | Sortie -> true
+  | Embranchement(_, _) -> false
+  <% end %>
+  <input class="code" type="text" pattern=" *CulDeSac *" required>
+  <input class="code" type="text" pattern=" *Sortie *" required>
+  <input class="code" type="text" pattern=" *Embranchement *" required>
+  <input class="code" type="text" pattern=" *grotte *\* *grotte *" required>
+</section>

@@ -55,7 +55,7 @@ Et, comme `+` sert à l'addition de deux entiers, l'opérateur pour concaténer 
 
 OCaml fournit plusieurs fonctions pour passer d'un type à un autre.
 Elles ont toutes un nom de la forme `DEST_of_ORIG`, où `DEST` est le type de « destination »,
-et « ORIG » le type d'origine. Par exemple, pour faire la conversion d'un `float` en `int`,
+et `ORIG` le type d'origine. Par exemple, pour faire la conversion d'un `float` en `int`,
 on utilisera `int_of_float`.
 
 Vous ne savez pas encore appeler des fonctions pour l'instant, mais c'est l'objet de la page suivante !

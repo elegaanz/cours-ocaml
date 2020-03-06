@@ -1,6 +1,6 @@
 ---
 title: Les types produits
-prev: '/III/2-types-produits'
+prev: '/III/2-types-synonymes'
 next: '/III/4-types-sommes'
 ---
 
@@ -50,7 +50,7 @@ que pour le compilateur OCaml.
 
 La déconstruction peut aussi être utilisée directement dans les arguments d'une fonction :
 
-```
+```ocaml
 let ajouter_une_heure (heure, minutes, secondes : temps) = (heure + 1, minutes, secondes)
 ```
 
