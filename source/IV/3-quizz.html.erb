@@ -30,8 +30,8 @@ type recette =
 *
 * Exemple :
 *
-* afficher(Prendre("rue de Mathématiques", Prendre("rue de la Physique", Arrive)))
-* = "prendra la rue des Mathématiques, puis la rue de la Physique, puis vous êtes arrivés."
+* afficher(Prendre("rue des Mathématiques", Prendre("rue de la Physique", Arrive)))
+* = "prendre la rue des Mathématiques, puis prendre la rue de la Physique, puis vous êtes arrivés."
 *)
 let rec afficher (i : itineraire) : string =
   match i with

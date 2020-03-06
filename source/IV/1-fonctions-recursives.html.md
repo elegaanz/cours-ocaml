@@ -47,7 +47,7 @@ Ou alternativement, celui-ci :
 ![Clara disait que mon schéma était pas clair, alors elle a fait celui là](/images/lebochemadeclara.png)
 
 Utilisez celui que vous préférez, l'important est d'arriver à comprendre comment cette fonction fait ce calcul (utilisez les deux si vous voulez même).
-Une fois que vous aurez saisit le principe de base, vous comprendrez assez facilement toutes les fonctions récursives.
+Une fois que vous aurez saisi le principe de base, vous comprendrez assez facilement toutes les fonctions récursives.
 Il faut juste avoir le déclic. Si vous voulez, voici quelques autres exemples de fonctions récursives :
 
 ```ocaml

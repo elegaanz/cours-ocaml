@@ -4,7 +4,7 @@ prev: '/IV/1-fonctions-recursives'
 next: '/IV/3-quizz'
 ---
 
-Un type récursif, un peu comme une fonction récursive, est un type qui ce contient
+Un type récursif, un peu comme une fonction récursive, est un type qui se contient
 lui-même dans sa définition. Ce sont donc des types sommes, dont un (ou plusieurs)
 constructeur a une donnée associée du même type. Et là aussi, on définit un cas de base
 non récursif.
@@ -33,7 +33,7 @@ let ma_liste =
   )
 ```
 
-Mais on peut imaginer un exemple plus complexe, comme par exemple un liste qui contient soit
+Mais on peut imaginer un exemple plus complexe, comme par exemple une liste qui contient soit
 un `int` soit un `float` :
 
 ```ocaml
