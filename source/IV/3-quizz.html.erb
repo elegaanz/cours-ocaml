@@ -44,7 +44,7 @@ let rec afficher (i : itineraire) : string =
   <% code('ocaml') do %>
 let rec compter_etapes (r : recette) : int =
   match r with
-  | PrendreIngredient(_, s), Instruction(_, s) | Cuisson(_, s) -> ______
+  | PrendreIngredient(_, s) | Instruction(_, s) | Cuisson(_, s) -> ______
   | Degustation -> 0 (* La dégustation ne compte pas vraiment comme une étape *)
   <% end %>
   <input class="code" type="text" pattern=" *(1 *\+ *\(?compter_etapes s\)?)|(\(? *compter_etapes s\)? *\+ *1) *" required>
