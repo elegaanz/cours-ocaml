@@ -9,7 +9,7 @@ d'écrire du code correct du premier coup. On sort alors généralement un papie
 et on commence à faire des schémas ou à écrire des exemples pour mieux comprendre comment
 fonctionnera notre code.
 
-De même, il peut parfois être complexe de comprendre du premier coup d'œuil ce que fait une
+De même, il peut parfois être complexe de comprendre du premier coup d'œil ce que fait une
 fonction, quand on lit du code.
 
 Pour éviter ces problèmes, on va souvent passer par une étape de **spécification**, qui
@@ -23,7 +23,7 @@ Concrètement, une spécification est un commentaire qu'on place juste avant le 
 Ce commentaire contient :
 
 - Le **nom** de la fonction ;
-- Son **profil**, qui correspond aux ensembles de départ et d'arrivée, en terme mathématiques (on écrira ℝ et pas `float` par e xemple) ;
+- Son **profil**, qui correspond aux ensembles de départ et d'arrivée, en terme mathématiques (on écrira ℝ et pas `float` par exemple) ;
 - Si besoin, une **signature**, qui est similaire au profil mais en terme OCaml (c'est littéralement le type de la fonction).
   Si elle est similaire au profil, pas besoin de la mettre ;
 - Une **description** (aussi appelée *sémantique*), qui explique avec des mots ce que fait cette fonction ;
@@ -91,7 +91,7 @@ On pourrait écrire ce commentaire au-dessus de `foix_deux` pour la spécifier, 
 
 Quand on écrit des fonctions récursives, une étape supplémentaire est ajoutée à la spécification :
 l'écriture d'équations récursives. Il s'agit simplement d'équations qui ressemblent plus ou moins
-à celles qu'on pourrait trouver en mathématiques, et qui disent comment ce comporte notre fonction récursive
+à celles qu'on pourrait trouver en mathématiques, et qui disent comment se comporte notre fonction récursive
 dans les différents cas. Concrètement, c'est une autre façon d'écrire les différents cas du `match` ou du `if`/`else`
 qu'on mettra dans notre code. Mais contrairement au match, l'ordre des différents cas n'a pas d'importance car
 on précisera à chaque fois dans quel cas on se trouve si il y a ambiguïté.
@@ -103,14 +103,14 @@ avec une fonction qui calcule la somme d'une séquence d'entiers (avec le même 
 (* …
  *
  * ÉQUATIONS RÉCURSIVES :
- *   somme(Nil) = 0
- *   somme(Cons(x, suite)) = x + somme(suite)
+ *   somme(Fin) = 0
+ *   somme(Element(x, suite)) = x + somme(suite)
  * …
  *)
 let rec somme (s : seq) : int =
   match s with
   | Nil -> 0
-  | Cons(x, suite) -> x + (somme suite)
+  | Element(x, suite) -> x + (somme suite)
 ```
 
 La « syntaxe » des équations récursives n'est pas la même que celle d'OCaml : on essaie de se rapprocher de l'écriture

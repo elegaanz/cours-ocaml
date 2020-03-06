@@ -42,6 +42,7 @@ let rec afficher (i : itineraire) : string =
   <input class="code" type="text" pattern=" *afficher +suite *" required>
 
   <% code('ocaml') do %>
+(* Compte le nombre d'étapes d'une recette *)
 let rec compter_etapes (r : recette) : int =
   match r with
   | PrendreIngredient(_, s) | Instruction(_, s) | Cuisson(_, s) -> ______

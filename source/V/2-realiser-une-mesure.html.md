@@ -16,7 +16,7 @@ cas « précédent » à chaque fois donc), on aura bien une suite décroissante
 strictement positif.
 
 Avec ces contraintes, on peut facilement s'assurer que notre fonction récursive se termine, grâce au théorème qui dit qu'une suite décroissante
-et positive (donc minorée par 0) converge : à un moment on atteindra 0, ce qui signifie qu'on a atteind le cas de base.
+et positive (donc minorée par 0) converge : à un moment on atteindra 0, ce qui signifie qu'on a atteint le cas de base.
 
 Prenons un exemple. Voici une fonction qui fait la somme des entiers entre -3 et `x` :
 
