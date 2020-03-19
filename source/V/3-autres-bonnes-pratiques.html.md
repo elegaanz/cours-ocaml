@@ -1,6 +1,7 @@
 ---
 title: Autres bonnes pratiques
 prev: '/V/2-realiser-une-mesure'
+next: '/VI/1-le-type-list'
 ---
 
 Il existe quelques autres astuces pour rendre son code le plus clair et le plus solide possible,
