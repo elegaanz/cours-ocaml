@@ -5,13 +5,13 @@ next: '/III/4-types-sommes'
 ---
 
 Nous allons maintenant voir un autre type de types (🤔️) : les types produits.
-On les appelle aussi n-uplets ou tuples (c'est ce nom qu'on utilise en Python).
-L'idée est juste de grouper plusieurs valeurs de types différents ensembles.
-On les appelle types produits par analogie avec les produits d'ensembles en maths.
+On les appelle aussi n-uplets ou tuples (c’est ce nom qu’on utilise en Python).
+L’idée est juste de grouper plusieurs valeurs de types différents ensembles.
+On les appelle types produits par analogie avec les produits d’ensembles en maths.
 
 Pour définir un type produit, on note les types des différentes valeurs à grouper,
 séparés par des `*`. Par exemple, si on veut modéliser une heure de la journée
-par trois `int` (un pour l'heure, un pour les minutes, un pour les secondes), on
+par trois `int` (un pour l’heure, un pour les minutes, un pour les secondes), on
 écrira :
 
 ```ocaml
@@ -44,17 +44,17 @@ let (heures, minutes, secondes) = fin_des_cours
 (* heures, minutes et secondes sont trois nouvelles constantes, de type int *)
 ```
 
-Remarquez aussi que les parenthèses sont en réalité optionelles quand on construit ou déconstruit
-ces types, mais on les met en général pour plus de clarté, et moins d'ambiguïté, aussi bien pour nous
+Remarquez aussi que les parenthèses sont en réalité optionnelles quand on construit ou déconstruit
+ces types, mais on les met en général pour plus de clarté, et moins d’ambiguïté, aussi bien pour nous
 que pour le compilateur OCaml.
 
-La déconstruction peut aussi être utilisée directement dans les arguments d'une fonction :
+La déconstruction peut aussi être utilisée directement dans les arguments d’une fonction :
 
 ```ocaml
 let ajouter_une_heure (heure, minutes, secondes : temps) = (heure + 1, minutes, secondes)
 ```
 
-On peut aussi utiliser la déconstruction pour les cas d'un pattern-matching :
+On peut aussi utiliser la déconstruction pour les cas d’un pattern-matching :
 
 ```ocaml
 let repas (heure : temps) : string =
@@ -63,7 +63,7 @@ let repas (heure : temps) : string =
   | (12, 0, 0) -> "Déjeuner"
   | (16, 30, 0) -> "Goûter"
   | (19, 30, 0) -> "Dîner"
-  | (h, _, _) -> (string_of_int h) ^ " heures ? C'est pas l'heure de manger !"
+  | (h, _, _) -> (string_of_int h) ^ " heures ? C’est pas l’heure de manger !"
 ```
 
 Et les comparaisons fonctionnent aussi, on peut donc utiliser des `if` avec une valeur de type produit :

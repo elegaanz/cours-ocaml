@@ -1,34 +1,34 @@
 ---
 title: Écrire une spécification
-prev: '/IV/3-quizz'
+prev: '/IV/3-quiz'
 next: '/V/2-realiser-une-mesure'
 ---
 
 Quand on commence à réaliser des fonctions un peu complexe, il peut être difficile
-d'écrire du code correct du premier coup. On sort alors généralement un papier et un crayon
+d’écrire du code correct du premier coup. On sort alors généralement un papier et un crayon
 et on commence à faire des schémas ou à écrire des exemples pour mieux comprendre comment
 fonctionnera notre code.
 
-De même, il peut parfois être complexe de comprendre du premier coup d'œil ce que fait une
+De même, il peut parfois être complexe de comprendre du premier coup d’œil ce que fait une
 fonction, quand on lit du code.
 
 Pour éviter ces problèmes, on va souvent passer par une étape de **spécification**, qui
 consiste à réfléchir et à écrire de manière explicite le fonctionnement de notre code.
-Ensuite, on passera à **l'implémentation**, c'est-à-dire le code en lui-même. Ainsi,
+Ensuite, on passera à **l’implémentation**, c’est-à-dire le code en lui-même. Ainsi,
 on sait où on va quand on écrit notre code plutôt que de tâtonner, et on évite ainsi
-beaucoup d'erreurs de raisonnement.
+beaucoup d’erreurs de raisonnement.
 
-Concrètement, une spécification est un commentaire qu'on place juste avant le code d'une fonction
+Concrètement, une spécification est un commentaire qu’on place juste avant le code d’une fonction
 (ou qui peut être en dehors du code, notamment en examen si on vous demande juste une spécification).
 Ce commentaire contient :
 
 - Le **nom** de la fonction ;
-- Son **profil**, qui correspond aux ensembles de départ et d'arrivée, en terme mathématiques (on écrira ℝ et pas `float` par exemple) ;
-- Si besoin, une **signature**, qui est similaire au profil mais en terme OCaml (c'est littéralement le type de la fonction).
+- Son **profil**, qui correspond aux ensembles de départ et d’arrivée, en termes mathématiques (on écrira ℝ et pas `float` par exemple) ;
+- Si besoin, une **signature**, qui est similaire au profil mais en terme OCaml (c’est littéralement le type de la fonction).
   Si elle est similaire au profil, pas besoin de la mettre ;
 - Une **description** (aussi appelée *sémantique*), qui explique avec des mots ce que fait cette fonction ;
-- Si c'est une fonction récursive, ses **équations récursives** (on va revenir dessus un peu plus bas) ;
-- De préférence, des **exemples pertinents** d'utilisation ;
+- Si c’est une fonction récursive, ses **équations récursives** (on va revenir dessus un peu plus bas) ;
+- De préférence, des **exemples pertinents** d’utilisation ;
 
 Voici un exemple concret avec une fonction qui donnerait le maximum de deux éléments :
 
@@ -59,7 +59,7 @@ Pour rendre les différentes parties plus explicites, on met souvent des titres 
  *)
 ```
 
-Ici, écrire à la fois le profil est la signature fait du sens, car on n'écrit pas les ensembles ℕ et `int` de la
+Ici, écrire à la fois le profil est la signature fait du sens, car on n’écrit pas les ensembles ℕ et `int` de la
 même façon en « mathématiques » et en OCaml. Mais si on avait le code suivant :
 
 ```ocaml
@@ -79,7 +79,7 @@ On pourrait écrire ce commentaire au-dessus de `foix_deux` pour la spécifier, 
 (* SPÉCIFICATION : premier
  * PROFIL :        seq → seq
  *
- * SÉMANTIQUE :    Multiplie tous les éléments d'une séquence par deux.
+ * SÉMANTIQUE :    Multiplie tous les éléments d’une séquence par deux.
  *
  * EXEMPLES :
  *
@@ -90,14 +90,14 @@ On pourrait écrire ce commentaire au-dessus de `foix_deux` pour la spécifier, 
 ## Les équations récursives
 
 Quand on écrit des fonctions récursives, une étape supplémentaire est ajoutée à la spécification :
-l'écriture d'équations récursives. Il s'agit simplement d'équations qui ressemblent plus ou moins
-à celles qu'on pourrait trouver en mathématiques, et qui disent comment se comporte notre fonction récursive
-dans les différents cas. Concrètement, c'est une autre façon d'écrire les différents cas du `match` ou du `if`/`else`
-qu'on mettra dans notre code. Mais contrairement au match, l'ordre des différents cas n'a pas d'importance car
-on précisera à chaque fois dans quel cas on se trouve si il y a ambiguïté.
+l’écriture d’équations récursives. Il s’agit simplement d’équations qui ressemblent plus ou moins
+à celles qu’on pourrait trouver en mathématiques, et qui disent comment se comporte notre fonction récursive
+dans les différents cas. Concrètement, c’est une autre façon d’écrire les différents cas du `match` ou du `if`/`else`
+qu’on mettra dans notre code. Mais contrairement au match, l’ordre des différents cas n’a pas d’importance, car
+on précisera à chaque fois dans quel cas on se trouve s’il y a ambiguïté.
 
 Voici un exemple (sans le reste de la spécification, uniquement les équations récursives)
-avec une fonction qui calcule la somme d'une séquence d'entiers (avec le même type `seq`) qu'au dessus :
+avec une fonction qui calcule la somme d’une séquence d’entiers (avec le même type `seq` qu’au-dessus) :
 
 ```ocaml
 (* …
@@ -113,8 +113,8 @@ let rec somme (s : seq) : int =
   | Element(x, suite) -> x + (somme suite)
 ```
 
-La « syntaxe » des équations récursives n'est pas la même que celle d'OCaml : on essaie de se rapprocher de l'écriture
-dont on a l'habitude en mathématiques.
+La « syntaxe » des équations récursives n’est pas la même que celle d’OCaml : on essaie de se rapprocher de l’écriture
+dont on a l’habitude en mathématiques.
 
 Voici un autre exemple avec la somme des entiers entre 0 et *n*, pour montrer comment éviter les ambiguïtés entre deux cas :
 

@@ -5,14 +5,14 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/svg+xml" href="/images/OCaml.svg">
-    <title><%= current_page.data.title || "Page inconnue" %> ⋅ Cours alternatif d'OCaml</title>
+    <title><%= current_page.data.title || "Page inconnue" %> ⋅ Cours alternatif d’OCaml</title>
     <%= stylesheet_link_tag "site" %>
     <%= stylesheet_link_tag "code" %>
     <%= javascript_include_tag "site" %>
   </head>
   <body>
     <header>
-      <h1><a href="/">Cours alternatif d'OCaml</a></h1>
+      <h1><a href="/">Cours alternatif d’OCaml</a></h1>
       <img src="/images/OCaml.svg" alt="Logo OCaml" style="border: none; width: 50px;" />
     </header>
     <% if current_page.data.illus %>
@@ -25,7 +25,7 @@
       <%= yield %>
       <nav>
         <% if current_page.data.prev %>
-          <a href="<%= current_page.data.prev %>">⇦ Page précedente</a>
+          <a href="<%= current_page.data.prev %>">⇦ Page précédente</a>
         <% end%>
         <% if current_page.data.next %>
           <a href="<%= current_page.data.next %>">Page suivante ⇨</a>

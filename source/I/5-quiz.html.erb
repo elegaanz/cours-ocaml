@@ -1,18 +1,18 @@
 ---
-title: Quizz de fin de chapitre
+title: Quiz de fin de chapitre
 prev: '/I/4-les-fonctions'
 next: '/II/1-conditions'
 ---
 
 <p>
-  Pour voir si vous avez bien compris ce qu'on a expliqué jusque là,
+  Pour voir si vous avez bien compris ce qu’on a expliqué jusque-là,
   vous pouvez essayer de répondre aux questions suivantes.
   Vos réponses passeront du vert au rouge si elles sont justes.
 </p>
 
 <section class="quizz">
   Quel est le type de chacune des expressions suivantes ?
-  Si le type n'est pas valide, tapez <code>ERREUR</code>.
+  Si le type n’est pas valide, tapez <code>ERREUR</code>.
 
   <% code('ocaml') do %>
 2 + 2
@@ -47,7 +47,7 @@ next: '/II/1-conditions'
   <% code('ocaml') do %>
 let ajouter x y = x + y
 
-ajouter (* C'est le type de "ajouter" qu'on demande *)
+ajouter (* C’est le type de "ajouter" qu’on demande *)
   <% end %>
   <input type="text" class="code" pattern="int ?-> ?int ?-> ?int" required>
 
@@ -57,10 +57,10 @@ ajouter (* C'est le type de "ajouter" qu'on demande *)
   <input type="text" class="code" pattern="erreur|Erreur|ERREUR" required>
 
   <% code('ocaml') do %>
-(* On suppose que 'x' et 'y' sont des constantes définies avant,
+(* On suppose que ’x’ et ’y’ sont des constantes définies avant,
  * mais dont on ne vous donne pas la valeur.
  *
- * Aussi : cette expression ne donne pas d'erreur de type.
+ * Aussi : cette expression ne donne pas d’erreur de type.
  *)
 
 x +. (y *. y)
@@ -111,8 +111,8 @@ let resultat = polynome 3
 </section>
 
 <p>
-  Une fois que vous avez fini, vous pouvez passer à la suite. Si vous n'avez pas eu juste à beaucoup de questions,
-  le mieux est sans doute de relire le premier chapitre, tout en testant les exemples de code vous même, et en
-  en créant de nouveaux vous même. Si quelque chose ne vous semble pas clair, vous pouvez écrire un mail à
+  Une fois que vous avez fini, vous pouvez passer à la suite. Si vous n’avez pas eu juste à beaucoup de questions,
+  le mieux est sans doute de relire le premier chapitre, tout en testant les exemples de code vous-même, et en
+  en créant de nouveaux vous-même. Si quelque chose ne vous semble pas clair, vous pouvez écrire un mail à
   <code>ana arobase gelez point xyz</code> pour des explications.
 </p>

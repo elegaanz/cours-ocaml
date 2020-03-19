@@ -1,7 +1,7 @@
 ---
 title: Les types récursifs
 prev: '/IV/1-fonctions-recursives'
-next: '/IV/3-quizz'
+next: '/IV/3-quiz'
 ---
 
 Un type récursif, un peu comme une fonction récursive, est un type qui se contient
@@ -9,17 +9,17 @@ lui-même dans sa définition. Ce sont donc des types sommes, dont un (ou plusie
 constructeur a une donnée associée du même type. Et là aussi, on définit un cas de base
 non récursif.
 
-On peut ainsi construire des listes d'éléments : le cas de base est la liste vide,
-et le cas récursif est un élément suivie d'une autre liste.
+On peut ainsi construire des listes d’éléments : le cas de base est la liste vide,
+et le cas récursif est un élément suivi d’une autre liste.
 
-Voici un exemple avec une liste d'entier :
+Voici un exemple avec une liste d’entier :
 
 ```ocaml
 type liste_entier =
   | Vide
   | Element of int * liste_entier
 
-(* La liste [1, 2, 3] peut s'écrire : *)
+(* La liste [1, 2, 3] peut s’écrire : *)
 let ma_liste =
   Element(
     1,
@@ -33,7 +33,7 @@ let ma_liste =
   )
 ```
 
-Mais on peut imaginer un exemple plus complexe, comme par exemple une liste qui contient soit
+Mais on peut imaginer un exemple plus complexe, par exemple une liste qui contient soit
 un `int` soit un `float` :
 
 ```ocaml
@@ -52,5 +52,5 @@ let somme_elements (liste : liste_entier) : int =
   | Element(x, reste) -> x + (somme_elements reste)
 ```
 
-Il n'y a pas grand chose de plus à dire sur les types récursifs. Le mieux pour bien les comprendre est de faire des
+Il n’y a pas grand-chose de plus à dire sur les types récursifs. Le mieux pour bien les comprendre est de faire des
 exercices où on les manipule.

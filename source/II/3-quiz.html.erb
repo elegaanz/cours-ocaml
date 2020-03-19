@@ -1,13 +1,13 @@
 ---
-title: Quizz de fin de chapitre
+title: Quiz de fin de chapitre
 prev: '/II/2-pattern-matching'
 next: '/III/1-theorie'
 ---
 
 <p>
-  Comme pour le chapitre précédent, voici un petit quizz pour voir ce que vous avez
-  compris et ce qu'il faut encore travailler. Le fonctionnement est toujours le même :
-  vos réponses deviennent vertes dès qu'elles sont justes.
+  Comme pour le chapitre précédent, voici un petit quiz pour voir ce que vous avez
+  compris et ce qu’il faut encore travailler. Le fonctionnement est toujours le même :
+  vos réponses deviennent vertes dès qu’elles sont justes.
 </p>
 
 <section class="quizz">
@@ -47,7 +47,7 @@ tarif_concert -15
 </section>
 
 <section class="quizz">
-  <p>Que faut-il écrire à la place des <code>______</code> pour que ces fonctions fassent ce qu'on attend d'elles ?</p>
+  <p>Que faut-il écrire à la place des <code>______</code> pour que ces fonctions fassent ce qu’on attend d’elles ?</p>
 
   <% code('ocaml') do %>
 let salut langue =
@@ -70,19 +70,4 @@ let capitale pays =
   | autre -> "Je ne connais pas la capitale de " ^ autre
   <% end %>
   <input class="code" type="text" pattern="&quot;(paris|Paris)&quot;" required>
-
-  <p>Celui là est peut être un peu plus dur à comprendre :</p>
-  <% code('ocaml') do %>
-let abs x =
-  if x > 0 then
-    x
-  else
-    -x
-
-let est_positif x =
-  match _____ with
-  | x -> true
-  | _ -> false
-  <% end %>
-  <input class="code" type="text" pattern="abs x" required>
 </section>
