@@ -2,7 +2,7 @@
 title: Installer OCaml
 ---
 
-Selon votre système d'exploitation, l'installation d'OCaml ne se passera pas de la même façon.
+Selon votre système d’exploitation, l’installation d’OCaml ne se passera pas de la même façon.
 
 ## Windows
 
@@ -25,7 +25,7 @@ Vous pouvez vous référer à [la documentation officielle](https://ocaml.org/do
 
 ## Mac OS X
 
-Il vous faudra l'installateur d'application [Homebrew], que vous pouvez obtenir avec cette commande :
+Il vous faudra l’installateur d’application [Homebrew], que vous pouvez obtenir avec cette commande :
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -46,5 +46,5 @@ Pour lancer du code, vous avez deux options. Dans tous les cas, il vous faudra u
 La première option est la commande `ocaml fichier.ml` (où `fichier.ml` est le nom du fichier avec votre code).
 
 La seconde est la commande `ocaml`, qui ouvre un terminal interactif où on peut taper du OCaml (un peu comme IDLE pour Python).
-Vous pouvez l'utiliser directement, ou charger des fichiers en tapant `#use "fichier.ml";;` (où `fichier.ml` est le nom de votre fichier de code).
+Vous pouvez l’utiliser directement, ou charger des fichiers en tapant `#use "fichier.ml";;` (où `fichier.ml` est le nom de votre fichier de code).
 Votre fichier sera alors chargé, et vous pourrez lancer de manière interactive ses fonctions.
