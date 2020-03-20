@@ -1,6 +1,5 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
-
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
@@ -40,9 +39,22 @@ configure :build do
   activate :minify_javascript
 end
 
+chapters = {
+  "I":    "Notions de base",
+  "II":   "Conditions et pattern-matching",
+  "III":  "Modéliser des données",
+  "IV":   "Récursivité",
+  "V":    "Coder, et bien coder",
+  "VI":   "Polymorphisme",
+  "VII":  "Ordre supérieur",
+  "VIII": "Le type list d’OCaml",
+  "IX":   "Les arbres",
+  "X":    "Annexes",
+}
+
 # Generate "prev" and "next" links for each page
 ready do
-  chaps = [ "I", "II", "III", "IV", "V", "VI" ]
+  chaps = [ "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X" ]
   pages = {}
   for r in sitemap.resources do
     c = r.destination_path.split("/")[0]
@@ -61,6 +73,9 @@ ready do
     prev_chap = if p >= 0 then pages[chaps[p]] else nil end
     next_chap = if n < chaps.size then pages[chaps[n]] else nil end
     j = 0
+    puts i
+    puts chaps[i]
+    puts pages
     for p in pages[chaps[i]] do
       prev_page = if j == 0
                     if prev_chap == nil
@@ -82,8 +97,13 @@ ready do
                   end
       p.data.prev = if prev_page != nil then prev_page.destination_path.delete_suffix("/index.html") else nil end
       p.data.next = if next_page != nil then next_page.destination_path.delete_suffix("/index.html") else nil end
-      puts p.data
+      p.data.chapter = chaps[i]
       j += 1
     end
+  end
+
+  for p in sitemap.resources do
+    p.data.chapters = chapters
+    puts p.data
   end
 end

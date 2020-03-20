@@ -43,6 +43,6 @@ L’Inria a également utilisé OCaml pour créer le logiciel *Coq* qui permet d
 
 ## Installer OCaml
 
-[L’annexe A](/A) explique comment installer OCaml si vous voulez l’utiliser sur votre ordinateur.
+[L’annexe A](/X/A) explique comment installer OCaml si vous voulez l’utiliser sur votre ordinateur.
 
 Sinon, il existe [cet interpréteur en ligne](https://try.ocamlpro.com/) qui vous permettra de tester de petits programmes.

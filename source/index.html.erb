@@ -30,72 +30,18 @@ illus: caml.jpg
 </p>
 
 <ol class="toc">
-  <li>
-    Notions de base
-    <ol>
-      <li><a href="/I/1-presentation">Présentation d’OCaml</a></li>
-      <li><a href="/I/2-premiers-pas">Premiers pas en OCaml</a></li>
-      <li><a href="/I/3-plus-de-types">Plus de types !</a></li>
-      <li><a href="/I/4-les-fonctions">Les fonctions</a></li>
-      <li><a href="/I/5-quiz">Quiz de fin de chapitre</a></li>
-    </ol>
-  </li>
-  <li>
-    Conditions et pattern-matching
-    <ol>
-      <li><a href="/II/1-conditions">Les conditions</a></li>
-      <li><a href="/II/2-pattern-matching">Le pattern-matching</a></li>
-      <li><a href="/II/3-quiz">Quiz de fin de chapitre</a></li>
-    </ol>
-  </li>
-  <li>
-    Modéliser des données
-    <ol>
-      <li><a href="/III/1-theorie">Un peu de théorie</a></li>
-      <li><a href="/III/2-types-synonymes">Les types synonymes</a></li>
-      <li><a href="/III/3-types-produits">Les types produits</a></li>
-      <li><a href="/III/4-types-sommes">Les types sommes</a></li>
-      <li><a href="/III/5-types-structures">Bonus : les types structurés</a></li>
-      <li><a href="/III/6-quiz">Quiz de fin de chapitre</a></li>
-    </ol>
-  </li>
-  <li>
-    Récursivité
-    <ol>
-      <li><a href="/IV/1-fonctions-recursives">Fonctions récursives</a></li>
-      <li><a href="/IV/2-types-recursifs">Types récursifs</a></li>
-      <li><a href="/IV/3-quiz">Quiz de fin de chapitre</a></li>
-    </ol>
-  </li>
-  <li>
-    Coder, et bien coder
-    <ol>
-      <li><a href="/V/1-ecrire-une-specification">Écrire une spécification</a></li>
-      <li><a href="/V/2-realiser-une-mesure">Réaliser une mesure</a></li>
-      <li><a href="/V/3-autres-bonnes-pratiques">Autres bonnes pratiques</a></li>
-    </ol>
-  </li>
-  <li>
-    Le type list d’OCaml
-    <ol>
-      <li><a href="/VI/1-le-type-list">Le type list</a></li>
-      <li><a href="/VI/2-quiz">Quiz de fin de chapitre</a></li>
-    </ol>
-  </li>
-  <li>
-      Les arbres
-  </li>
-  <li>
-      Ordre supérieur
-  </li>
-  <li>
-    Annexes :
-    <ol style="list-style-type: upper-alpha">
-      <li><a href="/A">Installer OCaml</a></li>
-    </ol>
-  </li>
+  <% for chap in current_page.data.chapters.values do %>
+    <li><%= chap %>
+    <ol <% if chap == "Annexes" %>style="list-style-type: upper-alpha"<% end %>>
+        <% for p in sitemap.resources.filter { |x| x.data.chapter == current_page.data.chapters.key(chap) }.sort_by { |x| x.destination_path } do %>
+          <li><a href="/<%= p.destination_path.delete_suffix '/index.html' %>">
+            <%= p.data.title %>
+          </a></li>
+        <% end %>
+      </ol>
+    </li>
+  <% end %>
 </ol>
-</h3>
 
 <p>Les deux derniers chapitres seront ajoutés une fois qu’ils auront été vus en cours.</p>
 

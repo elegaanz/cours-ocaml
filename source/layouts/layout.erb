@@ -20,6 +20,9 @@
     <% end %>
     <main>
       <% if not current_page.data.no_title %>
+        <% if current_page.data.chapter %>
+          <small><%= current_page.data.chapter %> &mdash; <%= current_page.data.chapters[current_page.data.chapter] %></small>
+        <% end %>
         <h1><%= current_page.data.title %></h1>
       <% end %>
       <%= yield %>
