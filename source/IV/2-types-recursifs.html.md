@@ -1,7 +1,5 @@
 ---
 title: Les types récursifs
-prev: '/IV/1-fonctions-recursives'
-next: '/IV/3-quiz'
 ---
 
 Un type récursif, un peu comme une fonction récursive, est un type qui se contient

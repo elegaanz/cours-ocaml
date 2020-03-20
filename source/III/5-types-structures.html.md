@@ -1,7 +1,5 @@
 ---
 title: 'Bonus : les types structurés'
-prev: '/III/4-types-sommes'
-next: '/III/6-quiz'
 ---
 
 Cette façon de créer des types n’est pas au programme du cours original, mais peut tout de même s’avérer utile.

@@ -1,7 +1,5 @@
 ---
 title: Les types sommes
-prev: '/III/3-types-produits'
-next: '/III/5-types-structures'
 ---
 
 Cette façon de définir des types est sans doute la plus utile et la plus courante en OCaml,

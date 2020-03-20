@@ -1,7 +1,5 @@
 ---
 title: 'Fonctions récursives'
-prev: '/III/6-quiz'
-next: '/IV/2-types-recursifs'
 ---
 
 Vous avez sans doute remarqué que jusqu’à présent, nous n’avions pas utilisé

@@ -1,7 +1,5 @@
 ---
 title: Écrire une spécification
-prev: '/IV/3-quiz'
-next: '/V/2-realiser-une-mesure'
 ---
 
 Quand on commence à réaliser des fonctions un peu complexe, il peut être difficile

@@ -1,8 +1,6 @@
 ---
 title: Les fonctions
 illus: math.jpg
-next: '/I/5-quiz'
-prev: '/I/3-plus-de-types'
 ---
 
 Comme nous l’avons dit un peu plus tôt, les fonctions sont au centre du langage OCaml.

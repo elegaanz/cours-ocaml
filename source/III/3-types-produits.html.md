@@ -1,7 +1,5 @@
 ---
 title: Les types produits
-prev: '/III/2-types-synonymes'
-next: '/III/4-types-sommes'
 ---
 
 Nous allons maintenant voir un autre type de types (🤔️) : les types produits.

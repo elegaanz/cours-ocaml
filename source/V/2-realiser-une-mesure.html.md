@@ -1,7 +1,5 @@
 ---
 title: Réaliser une mesure
-prev: '/V/1-ecrire-une-specification'
-next: '/V/3-autres-bonnes-pratiques'
 illus: rulers.jpg
 ---
 

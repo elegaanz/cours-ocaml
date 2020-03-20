@@ -25,10 +25,10 @@
       <%= yield %>
       <nav>
         <% if current_page.data.prev %>
-          <a href="<%= current_page.data.prev %>">⇦ Page précédente</a>
+          <a href="/<%= current_page.data.prev %>">⇦ Page précédente</a>
         <% end%>
         <% if current_page.data.next %>
-          <a href="<%= current_page.data.next %>">Page suivante ⇨</a>
+          <a href="/<%= current_page.data.next %>">Page suivante ⇨</a>
         <% end%>
       </nav>
     </main>

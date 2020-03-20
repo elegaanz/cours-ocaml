@@ -1,7 +1,5 @@
 ---
 title: Plus de types !
-prev: '/I/2-premiers-pas'
-next: '/I/4-les-fonctions'
 ---
 
 Comme nous l’avons vu sur la page précédente, OCaml a un type pour les entiers (`int`),

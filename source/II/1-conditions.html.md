@@ -1,7 +1,5 @@
 ---
 title: if et else
-prev: '/I/5-quiz'
-next: '/II/2-pattern-matching'
 illus: yew.jpg
 ---
 

@@ -1,8 +1,6 @@
 ---
 title: Premiers pas en OCaml
 illus: kindergarten.jpg
-prev: '/I/1-presentation'
-next: '/I/3-plus-de-types'
 ---
 
 Vous allez maintenant écrire vos premières lignes d’OCaml !

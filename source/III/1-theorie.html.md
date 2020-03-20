@@ -1,7 +1,5 @@
 ---
 title: Un peu de théorie
-prev: '/II/3-quiz'
-next: '/III/2-types-synonymes'
 ---
 
 Jusqu’à présent nous n’avons manipulé que des valeurs simples, qui utilisaient les types de base d’OCaml.

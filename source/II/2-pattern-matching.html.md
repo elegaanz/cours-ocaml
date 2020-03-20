@@ -1,7 +1,5 @@
 ---
 title: Le pattern-matching
-prev: '/II/1-conditions'
-next: '/II/3-quiz'
 illus: 'match.png'
 ---
 

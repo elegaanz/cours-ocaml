@@ -1,7 +1,5 @@
 ---
 title: Le type list
-prev: '/V/3-autres-bonnes-pratiques'
-next: '/VI/2-quiz'
 illus: liste.jpg
 ---
 

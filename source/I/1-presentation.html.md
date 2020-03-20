@@ -1,6 +1,5 @@
 ---
 title: Présentation d’OCaml
-next: '/I/2-premiers-pas'
 ---
 
 Dans cette première partie, nous allons essayer de répondre aux questions « Qu’est-ce que c’est OCaml ? »

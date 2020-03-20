@@ -1,7 +1,5 @@
 ---
 title: Les types synonymes
-prev: '/III/1-theorie'
-next: '/III/3-types-produits'
 ---
 
 La première façon de créer nos propres types est  de créer des types synonymes.
