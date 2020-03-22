@@ -1,5 +1,6 @@
 ---
 title: Installer OCaml
+description: "Cette annexe explique comment installer OCaml sous Mac OS X, Windows et Linux (Ubuntu, Debian, Fedora, etc)."
 ---
 
 Selon votre système d’exploitation, l’installation d’OCaml ne se passera pas de la même façon.

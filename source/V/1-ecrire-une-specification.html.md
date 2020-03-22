@@ -1,5 +1,6 @@
 ---
 title: Écrire une spécification
+description: "Comprendre où on va avant de coder est important. Écrire une spécification peut aider à bien concevoir son programme en avance."
 ---
 
 Quand on commence à réaliser des fonctions un peu complexe, il peut être difficile

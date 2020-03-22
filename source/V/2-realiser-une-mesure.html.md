@@ -1,6 +1,7 @@
 ---
 title: Réaliser une mesure
 illus: rulers.jpg
+description: "Une mesure permet de savoir si une fonction récursive termine bel et bien, évitant ainsi des bugs de récursion infinie."
 ---
 
 Quand on écrit du code récursif, il est parfois difficile de voir si notre fonction se termine bien pour tous les cas.

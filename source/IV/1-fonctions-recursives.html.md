@@ -1,5 +1,6 @@
 ---
 title: 'Fonctions récursives'
+description: "OCaml permet de définir des fonctions récursives (qui s'appellent elles-même) pour faire des opérations de manière répétées, comme on ferait des boucles en Python ou en C."
 ---
 
 Vous avez sans doute remarqué que jusqu’à présent, nous n’avions pas utilisé

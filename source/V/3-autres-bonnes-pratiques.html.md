@@ -1,5 +1,6 @@
 ---
 title: Autres bonnes pratiques
+description: "Il existe quelques bonnes pratiques en plus des spécifications et des mesures pour avoir un code de bonne qualité, comme l'écriture de tests."
 ---
 
 Il existe quelques autres astuces pour rendre son code le plus clair et le plus solide possible,

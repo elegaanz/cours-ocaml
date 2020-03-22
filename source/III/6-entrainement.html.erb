@@ -1,0 +1,169 @@
+---
+title: Entraînement
+description: "Un test interactif et des exercices pour savoir si le troisième chapitre du cours a été compris."
+---
+
+<p>
+  Voici un petit quiz pour voir si vous avez compris le chapitre sur les types.
+  Comme pour ceux d’avant, vos réponses deviendront vertes dès qu’elles sont justes.
+</p>
+
+<section class="quizz">
+  <p>On définit ces types :</p>
+
+  <% code('ocaml') do %>
+(* On modélise un emploi du temps *)
+
+type ue =
+  | Inf201
+  | Inf203
+  | Mat201
+  | Mat203
+  | Phy201
+  | Phy202
+  | Pause
+
+type horaire = int * int (* heure et minute *)
+type cours = horaire * horaire * ue (* heure de début et de fin, UE *)
+  <% end %>
+
+  <p>Quel est le type des expressions suivantes (seule la version la plus « simple » sera acceptée) ?</p>
+
+  <% code('ocaml') do %>
+Mat201
+  <% end %>
+  <input class="code" type="text" pattern="ue" required>
+
+  <% code('ocaml') do %>
+((13, 30), (15, 00), Inf201)
+  <% end %>
+  <input class="code" type="text" pattern="cours" required>
+
+  <% code('ocaml') do %>
+(13, 30, 00)
+  <% end %>
+  <input class="code" type="text" pattern="int *\* *int *\* *int" required>
+
+  <% code('ocaml') do %>
+'Z'
+  <% end %>
+  <input class="code" type="text" pattern="char" required>
+
+  <% code('ocaml') do %>
+(15, 32)
+  <% end %>
+  <input class="code" type="text" pattern="horaire|(int *\* *int)" required>
+</section>
+
+<section class="quizz">
+  <p>Que faut-il écrire à la place des <code>______</code> pour que ce code soit correct ?</p>
+
+  <% code('ocaml') do %>
+type tram = A | B | C | D | E
+type transport =
+  | Bus of int (* numero de ligne *)
+  | Tram of ______
+  | ______
+  | ______
+
+let nom_tram (t : tram) : string =
+  match t with
+  | A -> "A"
+  | B -> "B"
+  | C -> "C"
+  | D -> "D"
+  | E -> "E"
+
+let nom_transport (tra : transport) : string =
+  match tra with
+  | Bus(ligne) -> "Ligne " ^ (string_of_int ligne) ^ " de bus"
+  | Tram(t) -> "Tram " ^ (nom_tram t)
+  | Voiture -> "Voiture"
+  | Velo -> "Velo"
+  <% end %>
+  <input class="code" type="text" pattern="tram" required>
+  <p>Puis : </p>
+  <input class="code" type="text" pattern="Voiture" required>
+  <p>Et enfin :</p>
+  <input class="code" type="text" pattern="Velo" required>
+</section>
+
+<section class="quizz">
+  <p>
+    On va modéliser une collection de musique. Pour ça on va créer les types suivants : `musique`, `genre`, `album`, `type_album` (Single, EP, ou album).
+    Je vous laisse libre de faire ce que vous voulez, mais essayez de faire des types les plus complets possibles. Vous pouvez aussi ajouter des types
+    en plus (`artiste` par exemple) si vous avez envie.
+  </p>
+  <details>
+    <summary>Proposition de correction</summary>
+    <% code('ocaml') do %>
+type genre =
+  | Classique
+  | Electro
+  | KPop
+  | Pop
+  | Rap
+  | RnB
+  | Rock
+
+type artiste = string (* Le nom de l'artiste *)
+
+type type_album = Single | EP | Album
+
+type album = artiste * type_album * string (* le string est le nom de l'album *)
+
+type musique = string * genre * album * artiste
+
+(* On peut aussi définir album et musique avec des types structurés si on veut : *)
+type album = {
+  alb : album;
+  alb_type : type_album;
+  nom : string;
+}
+
+type musique = {
+  titre : string;
+  genre : genre;
+  alb : album;
+  art : artiste;
+}
+    <% end %>
+  </details>
+
+  <p>Je vous propose de continuer en écrivant des fonctions pour manipuler ces types.</p>
+  <ul>
+    <li><code>meme_album</code> qui dit si deux musiques sont dans le même album ;</li>
+    <li><code>meme_genre</code> qui dit si deux musiques appartiennent au même genre ;</li>
+    <li><code>long_titre</code> qui dit si le titre est long (quelque chose comme plus de 20 caractères). On peut utiliser la fonction <code>String.length : string -> int</code>.</li>
+  </ul>
+
+  <details>
+    <summary>Proposition de correction</summary>
+
+    <% code('ocaml') do %>
+let meme_album (a : musique) (b : musique) : bool =
+  let (_, _, alb_a, _) = a in
+  let (_, _, alb_b, _) = b in
+  alb_a = alb_b
+
+let meme_genre (a : musique) (b : musique) : bool =
+  let (_, genre_a, _, _) = a in
+  let (_, genre_b, _, _) = b in
+  genre_a = genre_b
+
+let long_titre (m : musique) : bool =
+  let (titre, _, _, _) = m in
+  (String.length titre) > 20
+
+(* Si vous avez utilisé des types structurés vous pouvez faire : *)
+let meme_album (a : musique) (b : musique) : bool =
+  a.alb = b.alb
+
+let meme_genre (a : musique) (b : musique) : bool =
+  a.genre = b.genre
+
+let long_titre (m : musique) : bool =
+  (String.length m.titre) > 20
+    <% end %>
+  </details>
+</section>

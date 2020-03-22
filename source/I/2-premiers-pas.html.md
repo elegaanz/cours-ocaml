@@ -1,6 +1,7 @@
 ---
 title: Premiers pas en OCaml
 illus: kindergarten.jpg
+description: "Vous allez maintenant écrire vos premières lignes d’Ocaml : des calculs mathématiques simples pour découvrir la syntaxe de base du langage."
 ---
 
 Vous allez maintenant écrire vos premières lignes d’OCaml !

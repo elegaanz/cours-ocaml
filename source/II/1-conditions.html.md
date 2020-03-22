@@ -1,6 +1,7 @@
 ---
 title: if et else
 illus: yew.jpg
+description: "Une explication des conditions en OCaml, avec les mot-clés if et else."
 ---
 
 *(L’image haut dessus c’est une branche d’if, voilà, c’est marrant)*

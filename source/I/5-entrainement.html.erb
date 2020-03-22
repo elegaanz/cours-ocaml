@@ -1,5 +1,6 @@
 ---
-title: Quiz de fin de chapitre
+title: Entraînement
+description: "Un test interactif et des exercices pour savoir si le premier chapitre du cours a été compris."
 ---
 
 <p>
@@ -106,6 +107,39 @@ let ______ = (2 * x * x) + (3 * x) + 11
 let resultat = polynome 3
   <% end %>
   <input type="text" class="code" pattern="(polynome x)|(polynome \(x ?: ?int\))" required>
+</section>
+
+<p>
+  Si vous voulez vous entraîner encore un peu, voici un vrai exercice.
+</p>
+
+<section class="quizz">
+  <p>Réalisez les fonction suivantes :</p>
+  <ul>
+    <li>Une fonction qui a un flottant <code>x</code> associe son cube ;</li>
+    <li>
+      Une fonction qui prend trois flottants en arguments : <code>a</code>, <code>b</code> et <code>epsilon</code>, et qui dit si <code>a</code> est égal à <code>b</code> à <code>epsilon</code> prêt.
+      Pour se simplifier la tâche, on considère que <code>a</code> sera toujours plus grand que <code>b</code> ;
+    </li>
+    <li>
+      Une fonction qui prend un caractère et un entier, et qui dit si cette entier est le code ASCII du caractère ou non.
+      Vous pouvez tester avec <code>'A'</code> qui a <code>65</code> comme code ASCII.
+    </li>
+  </ul>
+
+  <details>
+    <summary>Proposition de correction</summary>
+    <% code('ocaml') do %>
+let cube (x : float) : float = x * x * x
+
+let egal (a : float) (b : float) (epsilon : float) : bool =
+  let diff = a -. b in
+  diff < epsilon
+
+let est_ascii (c : char) (i : int) : bool =
+  (int_of_char c) = i
+    <% end %>
+  </details>
 </section>
 
 <p>

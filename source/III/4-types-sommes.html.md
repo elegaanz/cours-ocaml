@@ -1,5 +1,6 @@
 ---
 title: Les types sommes
+description: "OCaml permet la création de type somme, qui admettent différent constructeurs. Ils sont similaires aux énumérations en C ou en Rust."
 ---
 
 Cette façon de définir des types est sans doute la plus utile et la plus courante en OCaml,

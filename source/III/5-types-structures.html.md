@@ -1,5 +1,6 @@
 ---
 title: 'Bonus : les types structurés'
+description: "OCaml permet de définir des structures avec différents champs, comme en C, Java ou en Rust."
 ---
 
 Cette façon de créer des types n’est pas au programme du cours original, mais peut tout de même s’avérer utile.
@@ -17,8 +18,8 @@ type contact = {
   nom : string;
   prenom : string;
   age : int;
-  telephone : int * int * int * int * int ; (* 5 nombres séparés sont plus lisibles qu’un seul *)
-  email : string ;
+  telephone : int * int * int * int * int; (* 5 nombres séparés sont plus lisibles qu’un seul *)
+  email : string;
 }
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Le pattern-matching
 illus: 'match.png'
+description: "Le pattern-matching est une opération très courante en programmation fonctionnelle, et donc en OCaml. Cette page explique comment l'utiliser."
 ---
 
 En plus du `if`/`else` OCaml nous propose une autre façon, beaucoup plus puissante de

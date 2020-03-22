@@ -1,5 +1,6 @@
 ---
 title: Les types produits
+description: "OCaml permet de grouper plusieurs valeurs ensemble grâce aux types produits, aussi appelés n-uplets ou tuples."
 ---
 
 Nous allons maintenant voir un autre type de types (🤔️) : les types produits.

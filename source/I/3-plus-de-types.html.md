@@ -1,5 +1,6 @@
 ---
 title: Plus de types !
+description: "Cette page liste les types de base du langage OCaml : int, float, bool, char, string, etc."
 ---
 
 Comme nous l’avons vu sur la page précédente, OCaml a un type pour les entiers (`int`),

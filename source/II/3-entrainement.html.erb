@@ -1,5 +1,6 @@
 ---
-title: Quiz de fin de chapitre
+title: Entraînement
+description: "Un test interactif et des exercices pour savoir si le deuxième chapitre du cours a été compris."
 ---
 
 <p>
@@ -68,4 +69,34 @@ let capitale pays =
   | autre -> "Je ne connais pas la capitale de " ^ autre
   <% end %>
   <input class="code" type="text" pattern="&quot;(paris|Paris)&quot;" required>
+</section>
+
+<section class="quizz">
+  <p>Écrivez les fonctions suivantes :</p>
+  <ul>
+    <li>Une fonction valeur absolue pour les entiers ;</li>
+    <li>Une fonction qui à un nombre associe son nom en toutes lettres (vous n'êtes pas obligés de faire tous les nombres, une dizaine suffira largement).</li>
+  </ul>
+
+  <details>
+    <summary>Proposition de correction</summary>
+
+    <% code('ocaml') do %>
+let abs (x : int) : int =
+  if x > 0 then
+    x
+  else
+    -x
+
+let ecrire_nombre (x : int) : string =
+  match x with
+  | 0 -> "Zéro"
+  | 1 -> "Un"
+  | 2 -> "Deux"
+  | 3 -> "Trois"
+  | 4 -> "Quatre"
+  | 5 -> "Cinq"
+  | _ -> "Je ne sais pas compter au-delà de 5 :(".
+    <% end %>
+  </details>
 </section>

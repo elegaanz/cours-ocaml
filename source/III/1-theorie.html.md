@@ -1,5 +1,6 @@
 ---
 title: Un peu de théorie
+description: "Une brève introduction sur les types : pourquoi et comment les créer en OCaml."
 ---
 
 Jusqu’à présent nous n’avons manipulé que des valeurs simples, qui utilisaient les types de base d’OCaml.

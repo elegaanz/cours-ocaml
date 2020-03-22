@@ -1,5 +1,6 @@
 ---
 title: Les types synonymes
+description: "OCaml permet de définir des types qui sont des synonymes d'autres types."
 ---
 
 La première façon de créer nos propres types est  de créer des types synonymes.

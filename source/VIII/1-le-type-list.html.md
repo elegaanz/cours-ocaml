@@ -1,6 +1,7 @@
 ---
 title: Le type list
 illus: liste.jpg
+description: "OCaml fournit un type de liste récursif : list. Cette page en fait une brève présentation."
 ---
 
 Un type avec lequel on travaille assez souvent quand on écrit des programmes est le type « liste ».
@@ -8,14 +9,8 @@ Les ordinateurs sont très doués pour répéter plein de fois la même opérati
 et les listes nous permettent justement de représenter ces séries de données !
 
 Jusqu’à maintenant, on a vu qu’on pouvait le définir nous-même avec un type somme récursif (qui est soit
-une liste vide, soit un élément suivi d’une autre liste). Mais OCaml fournit un type similaire par défaut : le type `list`.
-
-Ce type a une petite particularité : il prend un paramètre. En effet, on ne l’a pas encore vu, mais il est possible
-de paramétrer un type par un autre type. Ainsi le type `list` s’appelle en réalité le type `'a list` : `'a` est un
-paramètre de type.
-
-Concrètement, on remplacera `'a` par un « vrai » type la plupart du temps. Par exemple, le type d’une liste d’entiers
-sera `int list`. Plus tard, on verra comment utiliser les types paramétrés plus en détails.
+une liste vide, soit un élément suivi d’une autre liste). Mais OCaml fournit un type similaire par défaut : le type `'a list`.
+Ce type est un type polymorphe : `'a` est le type des éléments de la liste.
 
 Comme la liste ne peut être paramétrée que par un seul type, on ne peut pas mélanger des valeurs de différents
 types dans une liste, comme on pouvait le faire en Python.
@@ -26,7 +21,7 @@ Il existe deux syntaxes pour créer des listes.
 
 La première ressemble à celle qu’on utilisait avec nos propres types de liste, parce qu’on a
 un constructeur pour la liste vide, et un pour le cas récursif. La liste vide s’écrit `[]`, et
-l’opérateur `::` ajoute un élément à une liste. On peut ainsi créer de petites listes de nombres :
+l’opérateur `::` ajoute un élément à une liste. On peut ainsi créer des listes de nombres :
 
 ```ocaml
 let liste_vide : float list = []
@@ -65,6 +60,15 @@ OCaml fournit en plus un opérateur pour concaténer (« additionner ») deux li
 ```ocaml
 let grosse_liste = moyenne_liste @ petite_liste
 (* grosse_liste vaut [ 1.7 ; 8.6 ; 88.56 ; 12.5 ] *)
+```
+
+On peut utiliser cet opérateur pour la déconstruction également ! Par exemple, si on veut
+faire du pattern-matching sur une liste qui contient `1` suivi de `2`, on peut faire :
+
+```ocaml
+match ma_liste with
+| avant @ [ 1 ; 2 ] @ apres -> "La liste contient 1 et 2"
+| _ -> "La liste ne contient pas 1 et 2"
 ```
 
 Pour résumer, il n’y a rien de très nouveau avec ce type, à part des syntaxes différentes de celles vues avant.

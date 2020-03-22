@@ -1,14 +1,47 @@
-<!doctype html>
-<html>
+<!doctype HTML>
+<html lang="fr" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="<%= current_page.data.description %>">
     <link rel="icon" type="image/svg+xml" href="/images/OCaml.svg">
+    <meta property="og:title" content="<%= current_page.data.title || "Page inconnue" %> ⋅ Cours alternatif d’OCaml">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Cours alternatif d'OCaml">
+    <meta property="og:url" content="https://ocaml.gelez.xyz/<%= current_page.destination_path.delete_suffix("/index.html") %>">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="<%= current_page.data.title || "Page inconnue" %> ⋅ Cours alternatif d’OCaml">
+    <meta name="twitter:description" content="<%= current_page.data.description %>">
+    <meta name="twitter:url" content="https://ocaml.gelez.xyz/<%= current_page.destination_path.delete_suffix("/index.html") %>">
+    <meta name="twitter:card" content="summary">
+    <% if current_page.data.illus %>
+      <meta property="og:image" content="https://ocaml.gelez.xyz/images/<%= current_page.data.illus %>">
+      <meta name="twitter:image" content="https://ocaml.gelez.xyz/images/<%= current_page.data.illus %>">
+    <% else %>
+      <meta property="og:image" content="https://ocaml.gelez.xyz/images/caml.jpg">
+      <meta name="twitter:image" content="https://ocaml.gelez.xyz/images/caml.jpg">
+    <% end %>
     <title><%= current_page.data.title || "Page inconnue" %> ⋅ Cours alternatif d’OCaml</title>
     <%= stylesheet_link_tag "site" %>
     <%= stylesheet_link_tag "code" %>
     <%= javascript_include_tag "site" %>
+    <% if current_page.data.jsonld %>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Cours alternatif d'OCaml",
+      "description": "Cours d'OCaml alternatif à l'UE d'INF201 de l'Université de Grenoble-Alpes. Couvre les bases du langage OCaml, et s'adresse principalement aux personnes ayant des bases en Python.",
+      "provider": {
+        "@type": "Person",
+        "name": "Baptiste Gelez",
+        "sameAs": "https://baptiste.gelez.xyz"
+      }
+    }
+    </script>
+    <% end %>
   </head>
   <body>
     <header>
@@ -26,14 +59,16 @@
         <h1><%= current_page.data.title %></h1>
       <% end %>
       <%= yield %>
-      <nav>
-        <% if current_page.data.prev %>
-          <a href="/<%= current_page.data.prev %>">⇦ Page précédente</a>
-        <% end%>
-        <% if current_page.data.next %>
-          <a href="/<%= current_page.data.next %>">Page suivante ⇨</a>
-        <% end%>
-      </nav>
+      <% if current_page.data.prev || current_page.data.next %>
+        <nav>
+          <% if current_page.data.prev %>
+            <a href="/<%= current_page.data.prev %>">⇦ Page précédente</a>
+          <% end%>
+          <% if current_page.data.next %>
+            <a href="/<%= current_page.data.next %>">Page suivante ⇨</a>
+          <% end%>
+        </nav>
+      <% end %>
     </main>
     <footer>
       <p>Ce cours est modifiable par tous sur <a href="https://github.com/elegaanz/cours-ocaml">GitHub</a>.</p>

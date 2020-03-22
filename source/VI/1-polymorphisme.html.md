@@ -1,5 +1,6 @@
 ---
 title: Polymorphisme
+description: "Le polymorphisme permet de créer des types paramétrés par d'autres types. Ce chapitre explique comment l'utiliser en OCaml."
 ---
 
 Vous avez sans doute remarqué que certains types qu'on créait se ressemblaient beaucoup.
@@ -70,7 +71,7 @@ let rec taille (l : 'a liste) : int =
 ## Plusieurs types en paramètres
 
 On peut aussi préciser plusieurs types en paramètres. Par exemple, on peut créer un type
-générique qui sert à indiquer si un calcul a réussi ou non :
+générique qui sert à indiquer si une opération a réussi ou non :
 
 ```ocaml
 type 'a 'b resultat =

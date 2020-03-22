@@ -1,6 +1,7 @@
 ---
 title: Les fonctions
 illus: math.jpg
+description: "Les fonctions sont un des éléments de base d'OCaml. Dans ce chapitre, nous allons apprendre comment les créer et les appeler."
 ---
 
 Comme nous l’avons dit un peu plus tôt, les fonctions sont au centre du langage OCaml.
@@ -175,6 +176,7 @@ ajouter_deux(5)
 ```
 
 Si vous n’avez pas totalement compris cette dernière partie, ce n’est pas très grave. La curryfication n’est pas simple à
-saisir du premier coup, même si elle peut aider à mieux comprendre le fonctionnement d’OCaml.
+saisir du premier coup, même si elle peut aider à mieux comprendre le fonctionnement d’OCaml. On y reviendra bien plus tard,
+dans [le chapitre VII](/VII/2-curryfication).
 
 [^refs]: En réalité, le concept de *référence* y correspond à peu près, mais on évite de l’utiliser, et nous n’en parlerons pas dans ce cours.

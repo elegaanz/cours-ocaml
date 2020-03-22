@@ -1,5 +1,6 @@
 ---
 title: Les types récursifs
+description: "Les types sommes d'OCaml peuvent avoir des constructeurs se comprenant eux-mêmes. On peut ainsi créer des types récursifs, de taille variable."
 ---
 
 Un type récursif, un peu comme une fonction récursive, est un type qui se contient

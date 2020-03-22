@@ -1,0 +1,82 @@
+---
+title: Entraînement
+description: "Un test interactif et des exercices pour savoir si le septième chapitre du cours a été compris."
+---
+
+<p>
+  C'est l'heure de s'entraîner ! Comme d'habitude, voici un petit quiz et un exercice pour voir si vous
+  avez compris l'ordre supérieur.
+</p>
+
+<section class="quizz">
+  <p>Donnez le type de ces fonctions.</p>
+
+  <% code('ocaml') do %>
+let est_croissante_entre_zero_et_un f =
+  f 0 < f 1
+  <% end %>
+  <input class="code" type="text" pattern="*(\(?int *-> *int\)?)|(\(?int *-> *'a\)?) *-> *bool *" required>
+
+  <% code('ocaml') do %>
+let addition = fun x y -> x + y
+  <% end %>
+  <input class="code" type="text" pattern="int *-> *int *-> *int" required>
+
+  <% code('ocaml') do %>
+(* Indice : en plus d'être d'ordre supérieur, cette fonction est polymorphe *)
+let point_fixe f x = (f x) = x
+  <% end %>
+  <input class="code" type="text" pattern="('a -> 'a) -> 'a -> bool" required>
+</section>
+
+<section class="quizz">
+  <p>
+    On va maintenant créer des fonctions d'ordre supérieur pour manipuler des listes. On définit donc un type
+    liste polymorphe de cette façon :
+  </p>
+  <% code('ocaml') do %>
+type 'a liste =
+  | Fin
+  | Element of 'a * liste
+  <% end %>
+
+  <p>Écrivez les fonctions suivantes : </p>
+  <ul>
+    <li>
+      Une fonction <code>associer</code> qui prend une fonction <code>f</code> et une liste <code>l</code> en paramètre, et qui
+      donne la liste <code>[ f l[0] ; f l[1] ; … ; f l[n] ]</code> ;
+    </li>
+    <li>
+      Une fonction <code>filtrer</code> qui prend une fonction et une liste, et qui ne garde que les éléments de la liste pour
+      lesquels la fonction a renvoyé <code>true</code> ;
+    </li>
+    <li>
+      Une fonction <code>existe</code> qui prend, encore une fois, une fonction booléenne <code>f</code>, et une liste, et renvoie <code>true</code> si
+      un élément de la liste satisfait la condition exprimée par <code>f</code>.
+    </li>
+  </ul>
+
+  <details>
+    <summary>Proposition de correction</summary>
+    <% code('ocaml') do %>
+let rec associer (f : 'a  -> 'b) (l : 'a liste) : 'b liste =
+  match l with
+  | Fin -> Fin
+  | Element(x, suite) -> Element(f x, associer f suite)
+
+let rec filtrer (f : 'a -> bool) (l : 'a liste) : 'a liste =
+  match l with
+  | Fin -> Fin
+  | Element(x, suite) ->
+    if f x then
+      Element(x, filtrer f suite)
+    else
+      filtrer f suite
+
+let rec existe (f : 'a -> bool) (l : 'a liste) : bool =
+  match l with
+  | Fin -> false
+  | Element(x, suite) -> (f x) || (existe f suite)
+    <% end %>
+  </details>
+</section>

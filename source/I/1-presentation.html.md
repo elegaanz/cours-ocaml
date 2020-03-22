@@ -1,5 +1,6 @@
 ---
 title: Présentation d’OCaml
+description: 'Dans cette première partie, nous allons essayer de répondre aux questions « Qu’est-ce que c’est OCaml ? » et « Pourquoi utiliser OCaml ? ». Si ces questions ne vous intéressent pas, vous pouvez directement passer à la suite.'
 ---
 
 Dans cette première partie, nous allons essayer de répondre aux questions « Qu’est-ce que c’est OCaml ? »

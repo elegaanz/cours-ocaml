@@ -1,0 +1,96 @@
+---
+title: Entraînement
+description: "Un test interactif et des exercices pour savoir si le huitième chapitre du cours a été compris."
+---
+
+<p>
+  Le fonctionnement reste le même qu’avant.
+</p>
+
+<section class="quizz">
+  <p>On a le code suivant :</p>
+
+  <% code('ocaml') do %>
+let ajouter element liste =
+  liste @ [ element ]
+
+let rec taille liste =
+  match liste with
+  | [] -> 0
+  | x :: suite -> 1 + (taille suite)
+
+let additionner n liste =
+  match liste with
+  | [] -> []
+  | x :: suite -> (x + n) :: (additionner n suite)
+  <% end %>
+
+  <p>Que donnent ces expressions ?</p>
+
+  <% code('ocaml') do %>
+ajouter 42 [ 1 ; 2 ]
+  <% end %>
+  <input class="code" type="text" pattern="(\[ *1 *; *2 *; *42;? *\])|(1 *:: *2 *:: *42 *:: *\[ *\])" required>
+
+
+  <% code('ocaml') do %>
+(taille [ 1 ; 1 ; 1 ]) + (taille [ 5 ; 6; 30; 180; 0 ])
+  <% end %>
+  <input class="code" type="text" pattern=" *0*8 *" required>
+
+  <% code('ocaml') do %>
+(additionner 2 [0 ; 5]) @ (additionner 10 [])
+  <% end %>
+  <input class="code" type="text" pattern="(\[ *2 *; *7 *;? *\])|(2 *:: *7 *:: *\[ *\])" required>
+</section>
+
+<section class="quizz">
+  <p>
+    En utilisant les fonctions du module <code>List</code>, écrivez une fonction qui fait le produit des valeurs absolues
+    des nombres pairs d'une liste d'entiers (c'est très tordu dit comme ça, mais relisez, vous allez comprendre).
+    Si vous voulez vérifier que votre code marche, la liste <code>[ 13 ; 27 ; -84; -12; 85; -7 ]</code> devrait donner <code>1008</code>.
+  </p>
+  <details>
+    <summary>Propositions de correction</summary>
+
+    <p>Première version : plus longue mais plus simple à comprendre.</p>
+
+    <% code('ocaml') do %>
+let abs x = if x > 0 then -x else x (* Note : cette fonction est prédéfinie en OCaml, on n'aurait même pas besoin de l'écrire. *)
+let est_pair x = (x mod 2) = 0
+let produit p x = p * x
+let calcul_etrange l =
+  let liste_abs = List.map abs l in
+  let liste_filtree = List.filter est_pair liste_abs in
+  List.fold_left produit 1 liste_filtree
+    <% end %>
+
+    <p>Deuxième version : on utilise <code>fun</code> pour tout compacter en une seule expression.</p>
+    <% code('ocaml') do %>
+let calcul_etrange l =
+  List.fold_left
+    (fun p x -> p * x)
+    1
+    (List.filter
+      (fun x -> (x mod 2) = 0)
+      (List.map
+        (fun x -> if x < 0 then -x else x)
+        l
+      )
+    )
+    <% end %>
+
+    <p>
+      Troisième version (bonus) : on utilise l'opérateur <code>|&gt;</code> qui permet d'enchaîner des fonctions. En résumé, il passe le résultat
+      de la fonction à sa gauche en paramètre de celle à sa droite. On utilise aussi l'opérateur <code>*</code> directement comme une fonction (attention
+      à ne pas le coller aux parenthèses sinon OCaml pense qu'on écrit un commentaire). Et enfin, pour avoir un code encore plus court et clair,
+      on passe par la fonction <code>abs</code> prédéfinie.
+    </p>
+    <% code('ocaml') do %>
+let calcul_etrange l = l
+  |> List.map abs
+  |> List.filter (fun x -> (x mod 2 = 0))
+  |> List.fold_left ( * ) 1
+    <% end %>
+  </details>
+</section>

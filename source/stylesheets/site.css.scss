@@ -122,6 +122,10 @@ main img {
     }
 }
 
+summary {
+    cursor: pointer;
+}
+
 .quizz {
     border-left: 3px solid $black;
     padding-left: 2em;
