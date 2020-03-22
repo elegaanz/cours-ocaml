@@ -10,11 +10,12 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:site_name" content="Cours alternatif d'OCaml" />
-    <meta property="og:url" content="https://ocaml.gelez.xyz/<%= current_page.destination_path.delete_suffix("/index.html") %>" />
+    <meta property="og:url" content="https://ocaml.gelez.xyz/<%= current_page.destination_path.delete_suffix("index.html") %>" />
+    <meta property="og:description" content="<%= current_page.data.description %>" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="<%= current_page.data.title || "Page inconnue" %> ⋅ Cours alternatif d’OCaml" />
     <meta name="twitter:description" content="<%= current_page.data.description %>" />
-    <meta name="twitter:url" content="https://ocaml.gelez.xyz/<%= current_page.destination_path.delete_suffix("/index.html") %>" />
+    <meta name="twitter:url" content="https://ocaml.gelez.xyz/<%= current_page.destination_path.delete_suffix("index.html") %>" />
     <meta name="twitter:card" content="summary" />
     <% if current_page.data.illus %>
       <meta property="og:image" content="https://ocaml.gelez.xyz/images/<%= current_page.data.illus %>" />
