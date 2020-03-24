@@ -70,11 +70,11 @@ let rec taille (l : 'a liste) : int =
 
 ## Plusieurs types en paramètres
 
-On peut aussi préciser plusieurs types en paramètres. Par exemple, on peut créer un type
-générique qui sert à indiquer si une opération a réussi ou non :
+On peut aussi préciser plusieurs types en paramètres, avec des parenthèses et des virgules.
+Par exemple, on peut créer un type générique qui sert à indiquer si une opération a réussi ou non :
 
 ```ocaml
-type 'a 'b resultat =
+type ('a, 'b) resultat =
   | Succes of 'a
   | Echec of 'b
 
@@ -87,7 +87,9 @@ type erreur =
 
 type message = string
 
-let recuperer_message : message erreur resultat = (* On fait le nécéssaire pour récupérer le message… *)
+(* Cette fonction donne soit un Succes avec un message,
+ * soit un Echec avec une erreur. *)
+let recuperer_message : (message, erreur) resultat = (* On fait le nécéssaire pour récupérer le message… *)
 
 let afficher_message =
   match recuperer_message with

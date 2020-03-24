@@ -10,40 +10,39 @@ description: "Un test interactif et des exercices pour savoir si le sixième cha
 </p>
 
 <section class="quizz">
-  <p>Sachant qu’on définit les types suivants :</p>
+  <p>On va définir un type <code>optionnel</code>, qui indique qu'une valeur peut-être présente ou non.</p>
 
   <% code('ocaml') do %>
-(* Une valeur qui est soit un 'a soit un 'b *)
-type 'a 'b soit =
-  | A of 'a
-  | B of 'b
+type 'a optionnel =
+  | None (* On a rien *)
+  | Some of 'a (* On a une valeur *)
   <% end %>
+
   <p>Quel est le type de ces fonctions ?</p>
 
   <% code('ocaml') do %>
-let lettre_ou_ascii c =
-  if 65 < c && c < 90 then
-    A(char_of_int c)
-  else
-    B(c)
+let qqch_ou_alors opt par_defaut =
+  match opt with
+  | Some(x) -> x
+  | None -> par_defaut
   <% end %>
-  <input class="code" type="text" pattern="int -> char int soit" required>
+  <input class="code" type="text" pattern=" *'a +optionnel *-> *'a *-> *'a *" required>
 
   <% code('ocaml') do %>
-let fusionner s =
-  match s with
-  | A(x) -> x
-  | B(y) -> y
+let contient opt x =
+  match opt with
+  | None -> false
+  | Some(y) -> x = y
   <% end %>
-  <input class="code" type="text" pattern="'a 'a soit -> 'a" required>
+  <input class="code" type="text" pattern=" *'a +optionnel *-> *'a *-> *bool *" required>
 
   <% code('ocaml') do %>
-let a_ou_alors s par_defaut =
-  match s with
-  | A(x) -> x
-  | _ -> par_defaut
+let multiplie opt x =
+  match opt with
+  | None -> None
+  | Some(a) -> Some(a *. x)
   <% end %>
-  <input class="code" type="text" pattern="'a 'b soit -> 'a -> 'a" required>
+  <input class="code" type="text" pattern=" *float +optionnel *-> *float *-> *float +optionnel *" required>
 </section>
 
 <section class="quizz">
@@ -68,18 +67,18 @@ let a_ou_alors s par_defaut =
   <details>
     <summary>Proposition de correction</summary>
     <% code('ocaml') do %>
-type 'c 'v dico =
+type ('c, 'v) dico =
   | Vide
-  | Element of 'c * 'v * 'c 'v dico
+  | Element of 'c * 'v * ('c, 'v) dico
 
 let creer = Vide
 
-let rec definir (cle : 'c) (valeur : 'v) (dic : 'c 'v dico) : 'c 'v dico =
+let rec definir (cle : 'c) (valeur : 'v) (dic : ('c, 'v) dico) : ('c, 'v) dico =
   match dic with
   | Element(_, _, suite) -> definir cle valeur suite
   | Vide -> Element(cle, valeur, Vide)
 
-let rec obtenir (cle : 'c) (dic : 'c 'v dico) : 'v =
+let rec obtenir (cle : 'c) (dic : ('c, 'v) dico) : 'v =
   match dic with
   | Vide -> failwith "Clé non trouvée"
   | Element(c, v, suite) ->
@@ -88,7 +87,7 @@ let rec obtenir (cle : 'c) (dic : 'c 'v dico) : 'v =
     else
       obtenir cle suite
 
-let rec supprimer (cle : 'c) (dic : 'c 'v dico) : 'c 'v dico =
+let rec supprimer (cle : 'c) (dic : ('c, 'v) dico) : ('c, 'v) dico =
   match dic with
   | Vide -> Vide
   | Element(c, v, suite) ->
