@@ -15,18 +15,18 @@ description: "Un test interactif et des exercices pour savoir si le septième ch
 let est_croissante_entre_zero_et_un f =
   f 0 < f 1
   <% end %>
-  <input class="code" type="text" pattern="*(\(?int *-> *int\)?)|(\(?int *-> *'a\)?) *-> *bool *" required>
+  <input class="code" type="text" pattern=" *(\(?int *-> *int\)?)|(\(?int *-> *'a\)?) *-> *bool *" required>
 
   <% code('ocaml') do %>
 let addition = fun x y -> x + y
   <% end %>
-  <input class="code" type="text" pattern="int *-> *int *-> *int" required>
+  <input class="code" type="text" pattern=" *\(? *int *-> *int *-> *int *\)? *" required>
 
   <% code('ocaml') do %>
 (* Indice : en plus d'être d'ordre supérieur, cette fonction est polymorphe *)
 let point_fixe f x = (f x) = x
   <% end %>
-  <input class="code" type="text" pattern="\('a -> 'a\) -> 'a -> bool" required>
+  <input class="code" type="text" pattern=" *\(? *'a *-> *'a *\)? *-> *'a *-> *bool *" required>
 </section>
 
 <section class="quizz">
