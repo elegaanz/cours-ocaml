@@ -4,13 +4,13 @@ description: "Un test interactif et des exercices pour savoir si le sixième cha
 ---
 
 <p>
-  Voici quelques exercices d'entraînement sur le polymorphisme.
-  Ils sont beaucoup plus abstraits que ceux d'avant, mais on n'a malheureusement pas trop le choix :
+  Voici quelques exercices d’entraînement sur le polymorphisme.
+  Ils sont beaucoup plus abstraits que ceux d’avant, mais on n’a malheureusement pas trop le choix :
   quand on commence à manipuler des types génériques, il faut réfléchir !
 </p>
 
 <section class="quizz">
-  <p>On va définir un type <code>optionnel</code>, qui indique qu'une valeur peut-être présente ou non.</p>
+  <p>On va définir un type <code>optionnel</code>, qui indique qu’une valeur peut-être présente ou non.</p>
 
   <% code('ocaml') do %>
 type 'a optionnel =
@@ -59,9 +59,9 @@ let multiplie opt x =
   <ul>
     <li>Définir le type <code>dico</code> (indice : il est polymorphe et récursif) ;</li>
     <li>Écrire la fonction <code>creer</code> qui crée un <code>dico</code> vide ;</li>
-    <li>Écrire la fonction <code>definir</code> qui prend une clé et une valeur, et l'ajoute à la fin d'un <code>dico</code> ;</li>
+    <li>Écrire la fonction <code>definir</code> qui prend une clé et une valeur, et l’ajoute à la fin d’un <code>dico</code> ;</li>
     <li>Écrire la fonction <code>obtenir</code> qui prend une clé et retrouve la valeur associée dans un <code>dico</code> ;</li>
-    <li>Et en bonus si vous avez envie : écrire une fonction <code>supprimer</code> qui prend une clé et l'enlève d'un dictionnaire.</li>
+    <li>Et en bonus si vous avez envie : écrire une fonction <code>supprimer</code> qui prend une clé et l’enlève d’un dictionnaire.</li>
   </ul>
 
   <details>

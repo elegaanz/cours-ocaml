@@ -18,7 +18,7 @@ Utilisez la commande `sudo apt install -y ocaml`, entrez votre mot de passe et v
 
 ### Fedore, CentOS, RHEL
 
-Utilisez la commande `sudo dnf install ocaml`, entrez votre mot de passse et validez.
+Utilisez la commande `sudo dnf install ocaml`, entrez votre mot de passe et validez.
 
 ### Autres distributions
 
@@ -49,3 +49,6 @@ La première option est la commande `ocaml fichier.ml` (où `fichier.ml` est le 
 La seconde est la commande `ocaml`, qui ouvre un terminal interactif où on peut taper du OCaml (un peu comme IDLE pour Python).
 Vous pouvez l’utiliser directement, ou charger des fichiers en tapant `#use "fichier.ml";;` (où `fichier.ml` est le nom de votre fichier de code).
 Votre fichier sera alors chargé, et vous pourrez lancer de manière interactive ses fonctions.
+
+Petite astuce : si vous voulez une version améliorée du terminal interactif OCaml (coloration et suggestions automatiques),
+vous pouvez installer `utop` avec la commande `opam install utop`, et le lancer avec `utop`.

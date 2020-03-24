@@ -31,7 +31,7 @@ let a =
   )
   <% end %>
 
-  <p>N'hésitez pas à dessiner l'arbre <code>a</code> si ça vous aide.</p>
+  <p>N’hésitez pas à dessiner l’arbre <code>a</code> si ça vous aide.</p>
 
   <p>Quelle est la taille de <code>a</code> ?</p>
   <input class="code" type="text" pattern="6" required>
@@ -48,16 +48,16 @@ let a =
 
 <section class="quizz">
   <p>
-    On va passer à un exercice plus concret. Imaginons que vous conceviez une application pour gérer les relevés de notes de l'université.
-    Lors de la remise des bulletins, vous devez associer à chaque numéro d'anonymat un nom d'étudiant⋅e. Mais il y a beaucoup d'étudiants,
+    On va passer à un exercice plus concret. Imaginons que vous conceviez une application pour gérer les relevés de notes de l’université.
+    Lors de la remise des bulletins, vous devez associer à chaque numéro d’anonymat un nom d’étudiant·e. Mais il y a beaucoup d’étudiants,
     alors pour accélérer la recherche dans la liste, vous décidez de passer par un dictionnaire binaire.
   </p>
   <p>
-    Le fonctionnement est le même qu'un arbre binaire classique, mais on associe à chaque nœud un couple, qui sera ici de type <code>int * string</code>
-    (numéro d'étudiant et nom). On classe les données dans l'arbre selon le numéro d'étudiant uniquement.
+    Le fonctionnement est le même qu’un arbre binaire classique, mais on associe à chaque nœud un couple, qui sera ici de type <code>int * string</code>
+    (numéro d’étudiant et nom). On classe les données dans l’arbre selon le numéro d’étudiant uniquement.
   </p>
   <p>
-    L'exercice est de créez le type <code>dico_binaire</code> et les fonctions <code>ajouter</code> (qui prend un arbre, un numéro et un nom)
+    L’exercice est de créer le type <code>dico_binaire</code> et les fonctions <code>ajouter</code> (qui prend un arbre, un numéro et un nom)
     et <code>trouver_nom</code> (qui prend un arbre et un numéro) correspondantes.
   </p>
 
@@ -102,13 +102,13 @@ let rec trouver_nom (num : int) (dic : dico_binaire) : string =
 <section class="quizz">
   <p>Si vous voulez vous entraîner à la démonstration par induction structurelle, essayer de prouver les propriétés suivantes :</p>
   <ol>
-    <li>La profondeur d'un arbre binaire est inférieure à sa taille.</li>
-    <li>La taille d'un arbre binaire est inférieure à 2 puissance : pronfondeur moins 1.</li>
+    <li>La profondeur d’un arbre binaire est inférieure à sa taille.</li>
+    <li>La taille d’un arbre binaire est inférieure à 2 puissance : profondeur moins 1.</li>
   </ol>
 </section>
 
 <p>
   Et voilà, ce cours se termine ici. Si vous aimez bien OCaml et que vous voudriez aller
-  plus loin, <a href="/X/C">l'annexe C peut vous donner des pistes</a>. Merci d'avoir lu jusqu'ici,
-  j'espère que ce cours vous aura aidé.
+  plus loin, <a href="/X/C">l’annexe C peut vous donner des pistes</a>. Merci d’avoir lu jusqu’ici,
+  j’espère que ce cours vous aura aidé (et on dit chocolatine).
 </p>

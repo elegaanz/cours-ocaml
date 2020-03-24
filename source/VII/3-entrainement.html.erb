@@ -4,8 +4,8 @@ description: "Un test interactif et des exercices pour savoir si le septième ch
 ---
 
 <p>
-  C'est l'heure de s'entraîner ! Comme d'habitude, voici un petit quiz et un exercice pour voir si vous
-  avez compris l'ordre supérieur.
+  C’est l’heure de s’entraîner ! Comme d’habitude, voici un petit quiz et un exercice pour voir si vous
+  avez compris l’ordre supérieur.
 </p>
 
 <section class="quizz">
@@ -23,7 +23,7 @@ let addition = fun x y -> x + y
   <input class="code" type="text" pattern=" *\(? *int *-> *int *-> *int *\)? *" required>
 
   <% code('ocaml') do %>
-(* Indice : en plus d'être d'ordre supérieur, cette fonction est polymorphe *)
+(* Indice : en plus d’être d’ordre supérieur, cette fonction est polymorphe *)
 let point_fixe f x = (f x) = x
   <% end %>
   <input class="code" type="text" pattern=" *\(? *'a *-> *'a *\)? *-> *'a *-> *bool *" required>
@@ -31,7 +31,7 @@ let point_fixe f x = (f x) = x
 
 <section class="quizz">
   <p>
-    On va maintenant créer des fonctions d'ordre supérieur pour manipuler des listes. On définit donc un type
+    On va maintenant créer des fonctions d’ordre supérieur pour manipuler des listes. On définit donc un type
     liste polymorphe de cette façon :
   </p>
   <% code('ocaml') do %>

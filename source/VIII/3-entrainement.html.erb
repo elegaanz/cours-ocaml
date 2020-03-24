@@ -4,7 +4,8 @@ description: "Un test interactif et des exercices pour savoir si le huitième ch
 ---
 
 <p>
-  Le fonctionnement reste le même qu’avant.
+  Le fonctionnement reste le même qu’avant : dans le quiz, les réponses deviennent vertes quand elles sont justes,
+  et il y a des exercices corrigés ensuite.
 </p>
 
 <section class="quizz">
@@ -49,13 +50,13 @@ ajouter 42 [ 1 ; 2 ]
   <ul>
     <li><code>plus_grande</code> : prend deux listes et renvoie la plus grande des deux ;</li>
     <li>
-      <code>fib</code> : prend un entier `n` et renvoie la liste des `n` premiers entiers de la suite de Fibonacci.
+      <code>fib</code> : prend un entier <code>n</code> et renvoie la liste des <code>n</code> premiers entiers de la suite de Fibonacci.
       Une fonction auxiliaire qui donne le n-ième terme de cette suite peut sans doute aider ;
     </li>
     <li>
-      <code>quarante_deux</code> : qui ajoute 42 à tous les éléments d'une liste d'entiers ;
+      <code>quarante_deux</code> : qui ajoute 42 à tous les éléments d’une liste d’entiers ;
     </li>
-    <li><code>moyenne</code> : qui fait la moyenne d'une liste de flottants.</li>
+    <li><code>moyenne</code> : qui fait la moyenne d’une liste de flottants.</li>
   </ul>
   <details>
     <summary>Proposition de correction</summary>
@@ -112,7 +113,7 @@ let fib n =
 (* Ici on utilise bien fun et une application partielle *)
 let quarante_deux = List.map (fun x -> x + 42)
 
-(* Ici on ne peut pas utiliser d'application partielle, mais on utilise fun : *)
+(* Ici on ne peut pas utiliser d’application partielle, mais on utilise fun : *)
 let moyenne liste =
   List.fold_left (fun x y -> x +. y) 0.0 liste in
   total /. (List.length liste)
@@ -122,7 +123,7 @@ let moyenne liste =
 <section class="quizz">
   <p>
     En utilisant les fonctions du module <code>List</code>, écrivez une fonction qui fait le produit des valeurs absolues
-    des nombres pairs d'une liste d'entiers (c'est très tordu dit comme ça, mais relisez, vous allez comprendre).
+    des nombres pairs d’une liste d’entiers (c’est très tordu dit comme ça, mais relisez, vous allez comprendre).
     Si vous voulez vérifier que votre code marche, la liste <code>[ 13 ; 27 ; -84 ; -12 ; 85; -7 ]</code> devrait donner <code>1008</code>.
   </p>
   <details>
@@ -131,7 +132,7 @@ let moyenne liste =
     <p>Première version : plus longue mais plus simple à comprendre.</p>
 
     <% code('ocaml') do %>
-let abs x = if x > 0 then -x else x (* Note : cette fonction est prédéfinie en OCaml, on n'aurait même pas besoin de l'écrire. *)
+let abs x = if x > 0 then -x else x (* Note : cette fonction est prédéfinie en OCaml, on n’aurait même pas besoin de l’écrire. *)
 let est_pair x = (x mod 2) = 0
 let produit p x = p * x
 
@@ -157,9 +158,9 @@ let calcul_etrange l =
     <% end %>
 
     <p>
-      Troisième version (bonus) : on utilise l'opérateur <code>|&gt;</code> qui permet d'enchaîner des fonctions. En résumé, il passe le résultat
-      de la fonction à sa gauche en paramètre de celle à sa droite. On utilise aussi l'opérateur <code>*</code> directement comme une fonction (attention
-      à ne pas le coller aux parenthèses sinon OCaml pense qu'on écrit un commentaire). Et enfin, pour avoir un code encore plus court et clair,
+      Troisième version (bonus, il y a des choses qu’on a pas vu) : on utilise l’opérateur <code>|&gt;</code> qui permet d’enchaîner des fonctions. En résumé, il passe le résultat
+      de la fonction à sa gauche en paramètre de celle à sa droite. On utilise aussi l’opérateur <code>*</code> directement comme une fonction (attention
+      à ne pas le coller aux parenthèses sinon OCaml pense qu’on écrit un commentaire). Et enfin, pour avoir un code encore plus court et clair,
       on passe par la fonction <code>abs</code> prédéfinie.
     </p>
     <% code('ocaml') do %>
