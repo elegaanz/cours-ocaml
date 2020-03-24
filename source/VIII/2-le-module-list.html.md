@@ -95,7 +95,7 @@ List.map int_of_char [ 'a' ; 'b' ; 'Z' ]
 List.filter ('a -> bool) -> 'a list -> 'a list
 ```
 
-Filtre une liste en fonction d'un prédicat. La première fonction va être appliquée à tous les élements
+Filtre une liste en fonction d'une condition. La première fonction va être appliquée à tous les élements
 de la liste, et si elle renvoie `true` l'élement en question sera gardé. Voici un exemple pour ne garder que
 les élements pairs d'une liste :
 
@@ -109,7 +109,7 @@ List.filter (fun x -> (x mod 2) = 0) [ 1; 2; 3; 10; 11; 19; 38 ]
 List.find ('a -> bool) -> 'a list -> 'a
 ```
 
-Donne le premier élément correspondant à un prédicat. Si on veut trouver le premier élément d'une
+Donne le premier élément correspondant à une condition. Si on veut trouver le premier élément d'une
 liste supérieur à 10, on peut par exemple faire :
 
 ```ocaml

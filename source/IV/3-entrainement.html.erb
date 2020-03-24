@@ -38,7 +38,7 @@ let rec afficher (i : itineraire) : string =
   | ______(nom_route, suite) -> "prendre la " ^ nom_route ^ ", puis " ^ ______
   <% end %>
   <input class="code" type="text" pattern=" *Prendre *" required>
-  <input class="code" type="text" pattern=" *afficher +suite *" required>
+  <input class="code" type="text" pattern=" *\(? *afficher +suite *\)? *" required>
 
   <% code('ocaml') do %>
 (* Compte le nombre d’étapes d’une recette *)

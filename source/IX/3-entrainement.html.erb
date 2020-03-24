@@ -1,0 +1,114 @@
+---
+title: Entraînement
+description: 'Un quiz interactif et des exercices corrigés pour voir si vous avez compris le neuvième chapitre.'
+---
+
+<p>
+  Cet entraînement est le dernier du cours, après vous saurez tout (ou presque) sur OCaml !
+</p>
+
+<section class="quizz">
+  <p>Prenons ce code :</p>
+
+  <% code('ocaml') do %>
+type arbre =
+  | Fin
+  | Noeud of char * arbre * arbre
+
+let a =
+  Noeud(
+    'k',
+    Noeud(
+      'g',
+      Noeud(
+        'f',
+        Noeud('a', Fin, Fin),
+        Fin
+      ),
+      Noeud('i', Fin, Fin)
+    ),
+    Noeud('k', Fin, Fin)
+  )
+  <% end %>
+
+  <p>N'hésitez pas à dessiner l'arbre <code>a</code> si ça vous aide.</p>
+
+  <p>Quelle est la taille de <code>a</code> ?</p>
+  <input class="code" type="text" pattern="6" required>
+
+  <p>Quelle est la profondeur de <code>a</code> ?</p>
+  <input class="code" type="text" pattern="4" required>
+
+  <p>Que vaut la racine de <code>a</code> ?</p>
+  <input class="code" type="text" pattern="'?k'?" required>
+
+  <p>Combien <code>a</code> a-t-il de feuilles ?</p>
+  <input class="code" type="text" pattern="3" required>
+</section>
+
+<section class="quizz">
+  <p>
+    On va passer à un exercice plus concret. Imaginons que vous conceviez une application pour gérer les relevés de notes de l'université.
+    Lors de la remise des bulletins, vous devez associer à chaque numéro d'anonymat un nom d'étudiant⋅e. Mais il y a beaucoup d'étudiants,
+    alors pour accélérer la recherche dans la liste, vous décidez de passer par un dictionnaire binaire.
+  </p>
+  <p>
+    Le fonctionnement est le même qu'un arbre binaire classique, mais on associe à chaque nœud un couple, qui sera ici de type <code>int * string</code>
+    (numéro d'étudiant et nom). On classe les données dans l'arbre selon le numéro d'étudiant uniquement.
+  </p>
+  <p>
+    L'exercice est de créez le type <code>dico_binaire</code> et les fonctions <code>ajouter</code> (qui prend un arbre, un numéro et un nom)
+    et <code>trouver_nom</code> (qui prend un arbre et un numéro) correspondantes.
+  </p>
+
+  <details>
+    <summary>Proposition de correction</summary>
+
+    <% code('ocaml') do %>
+type dico_binaire =
+  | Fin
+  | Noeud of (int * string) * dico_binaire * dico_binaire
+
+let rec ajouter (num : int) (nom : string) (dic : dico_binaire) : dico_binaire =
+  match dic with
+  | Fin -> Noeud((num, nom), Fin, Fin)
+  | Noeud((num_actuel, nom_actuel), gauche, droite) ->
+    if num_actuel = num then (* Les deux numéros sont les mêmes : on met à jour le nom *)
+      Noeud((num_actuel, nom), gauche, droite)
+    else if num_actuel > num then (* On insère à gauche *)
+      Noeud((num_actuel, nom_actuel), ajouter num nom gauche, droite)
+    else (* On insère à droite *)
+      Noeud((num_actuel, nom_actuel), gauche, ajouter num nom droite)
+
+let rec trouver_nom (num : int) (dic : dico_binaire) : string =
+  match dic with
+  | Fin -> "Introuvable"
+  | Noeud((n, nom), gauche, droite) ->
+    if num = n then
+      nom
+    else if num < n then
+      trouver_nom num gauche
+    else
+      trouver_nom num droite
+    <% end %>
+  </details>
+
+  <p>
+    Si vous voulez aller plus loin, essayez de rendre <code>dico_binaire</code> polymorphe (pour accepter autre chose que des entiers et du texte),
+    et créez la fonction <code>supprimer (dic : ('a, 'b) dico_binaire) (cle : 'a) : ('a, 'b) dico_binaire</code>.
+  </p>
+</section>
+
+<section class="quizz">
+  <p>Si vous voulez vous entraîner à la démonstration par induction structurelle, essayer de prouver les propriétés suivantes :</p>
+  <ol>
+    <li>La profondeur d'un arbre binaire est inférieure à sa taille.</li>
+    <li>La taille d'un arbre binaire est inférieure à 2 puissance : pronfondeur moins 1.</li>
+  </ol>
+</section>
+
+<p>
+  Et voilà, ce cours se termine ici. Si vous aimez bien OCaml et que vous voudriez aller
+  plus loin, <a href="/X/C">l'annexe C peut vous donner des pistes</a>. Merci d'avoir lu jusqu'ici,
+  j'espère que ce cours vous aura aidé.
+</p>
