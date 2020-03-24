@@ -45,10 +45,85 @@ ajouter 42 [ 1 ; 2 ]
 </section>
 
 <section class="quizz">
+  <p>En utilisant les fonctions du module <code>List</code>, écrivez les fonctions suivantes :</p>
+  <ul>
+    <li><code>plus_grande</code> : prend deux listes et renvoie la plus grande des deux ;</li>
+    <li>
+      <code>fib</code> : prend un entier `n` et renvoie la liste des `n` premiers entiers de la suite de Fibonacci.
+      Une fonction auxiliaire qui donne le n-ième terme de cette suite peut sans doute aider ;
+    </li>
+    <li>
+      <code>quarante_deux</code> : qui ajoute 42 à tous les éléments d'une liste d'entiers ;
+    </li>
+    <li><code>moyenne</code> : qui fait la moyenne d'une liste de flottants.</li>
+  </ul>
+  <details>
+    <summary>Proposition de correction</summary>
+
+    <% code('ocaml') do %>
+let plus_grande liste_a liste_b =
+  if (List.length liste_a) > (List.length liste_b) then
+    liste_a
+  else
+    liste_b
+
+let fib n =
+  (* On définit une fonction auxiliaire qui donne un terme de la suite *)
+  let rec fib_x x =
+    if x < 2 then
+      1
+    else
+      (fib_x (x - 1)) + (fib_x (x - 2))
+  in
+  List.init n fib_x (* On crée une liste de n éléments qui sont les termes de la suite *)
+
+let ajouter_42 x = x + 42
+let quarante_deux liste = List.map ajouter_42 liste
+
+let addition x y = x +. y
+let moyenne liste =
+  let total = List.fold_left addition 0.0 liste in
+  total /. (List.length liste)
+    <% end %>
+  </details>
+
+  <details>
+    <summary>Proposition de correction (avec <code>fun</code> et des applications partielles)</summary>
+
+    <% code('ocaml') do %>
+(* Cette fonction ne change pas par rapport à la première correction *)
+let plus_grande liste_a liste_b =
+  if (List.length liste_a) > (List.length liste_b) then
+    liste_a
+  else
+    liste_b
+
+(* Celle-ci non plus, car on ne peut pas faire de fonctions récursives avec fun *)
+let fib n =
+  (* On définit une fonction auxiliaire qui donne un terme de la suite *)
+  let rec fib_x x =
+    if x < 2 then
+      1
+    else
+      (fib_x (x - 1)) + (fib_x (x - 2))
+  in
+  List.init n fib_x (* On crée une liste de n éléments qui sont les termes de la suite *)
+
+(* Ici on utilise bien fun et une application partielle *)
+let quarante_deux = List.map (fun x -> x + 42)
+
+(* Ici on ne peut pas utiliser d'application partielle, mais on utilise fun : *)
+let moyenne liste =
+  List.fold_left (fun x y -> x +. y) 0.0 liste in
+  total /. (List.length liste)
+    <% end %>
+</section>
+
+<section class="quizz">
   <p>
     En utilisant les fonctions du module <code>List</code>, écrivez une fonction qui fait le produit des valeurs absolues
     des nombres pairs d'une liste d'entiers (c'est très tordu dit comme ça, mais relisez, vous allez comprendre).
-    Si vous voulez vérifier que votre code marche, la liste <code>[ 13 ; 27 ; -84; -12; 85; -7 ]</code> devrait donner <code>1008</code>.
+    Si vous voulez vérifier que votre code marche, la liste <code>[ 13 ; 27 ; -84 ; -12 ; 85; -7 ]</code> devrait donner <code>1008</code>.
   </p>
   <details>
     <summary>Propositions de correction</summary>
@@ -59,6 +134,7 @@ ajouter 42 [ 1 ; 2 ]
 let abs x = if x > 0 then -x else x (* Note : cette fonction est prédéfinie en OCaml, on n'aurait même pas besoin de l'écrire. *)
 let est_pair x = (x mod 2) = 0
 let produit p x = p * x
+
 let calcul_etrange l =
   let liste_abs = List.map abs l in
   let liste_filtree = List.filter est_pair liste_abs in
