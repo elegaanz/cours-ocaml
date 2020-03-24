@@ -1,6 +1,7 @@
 ---
 title: Curryfication
 description: "En OCaml, les fonctions peuvent être appliquées partiellement, on n'est pas obligé de donner tous les arguments d'un coup. Ce processus s'apelle la curryfication."
+illus: curry.webp
 ---
 
 Pour bien comprendre comment l'ordre supérieur fonctionne, et pour pouvoir l'utliser à plein potentiel,
