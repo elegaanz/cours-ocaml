@@ -95,7 +95,7 @@ List.sort : ('a -> 'a -> int) -> 'a list -> 'a list
 Trie une liste suivant une fonction de comparaison donnée en premier argument. En général, on utilisera la fonction
 prédéfinie `compare`. Attention, il se peut que cette fonction soit interdite en examen.
 
-```
+```ocaml
 List.sort compare [ 12 ; 7 ; 33 ] (* Donne [ 7 ; 12 ; 33 ] *)
 ```
 
@@ -164,6 +164,7 @@ les éléments pairs d’une liste :
 ```ocaml
 let est_pair x = (x mod 2) = 0
 List.filter est_pair [ 1 ; 2 ; 3 ; 10 ; 11 ; 19 ; 38 ]
+(* Donne [ 2 ; 10 ; 38 ] *)
 
 (* Ou, avec fun : *)
 List.filter (fun x -> (x mod 2) = 0) [ 1 ; 2 ; 3 ; 10 ; 11 ; 19 ; 38 ]

@@ -59,7 +59,7 @@ On va essayer de représenter l’arbre schématisé au-dessus avec un type OCam
 On va pour cela utiliser un type somme récursif.
 
 ```ocaml
-type abre =
+type arbre =
   | Feuille
   | Noeud of arbre * arbre
 ```
@@ -75,7 +75,7 @@ type 'a arbre =
 
 On peut aussi décider de rajouter des données à chaque nœud :
 
-```
+```ocaml
 type 'a arbre =
   | Feuille of 'a
   | Noeud of 'a * 'a arbre * 'a arbre
