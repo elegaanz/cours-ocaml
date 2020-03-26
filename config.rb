@@ -1,3 +1,5 @@
+require 'builder'
+
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 activate :autoprefixer do |prefix|
@@ -9,6 +11,7 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true, :tables => tru
 
 activate :directory_indexes
 activate :syntax
+page "/sitemap.xml", :layout => false
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/

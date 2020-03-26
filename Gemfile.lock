@@ -11,6 +11,7 @@ GEM
     autoprefixer-rails (9.7.4)
       execjs
     backports (3.16.1)
+    builder (3.2.4)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -104,6 +105,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  builder
   middleman (~> 4.2)
   middleman-autoprefixer (~> 2.7)
   middleman-syntax (~> 3.2)
