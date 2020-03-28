@@ -86,6 +86,9 @@ let region num =
 
 ## Bonus : le mot clé `function`
 
+*Comme indiqué dans l'introduction de ce cours, ce mot-clé n'est pas au programme de l'UE d'INF201,
+mais il est présenté car il peut être utile parfois. Et de même pour toutes les autres sections « Bonus » qui suivront.*
+
 Si vous écrivez une fonction qui n’a qu’un seul argument et que vous voulez juste faire un match sur cet argument,
 vous pouvez utiliser le mot-clé `function` qui permettra de raccourcir un peu votre code :
 

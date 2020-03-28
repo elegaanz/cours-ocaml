@@ -27,7 +27,8 @@ un problème donné, qu’on ne pourra pas réutiliser avec les langages fonctio
 
 En effet, dans un langage fonctionnel, tout tourne autour des fonctions (quelle surprise).
 Ainsi, on essaie au maximum de manipuler les données et de résoudre nos problèmes en utilisant des fonctions.
-Concrètement, ça veut par exemple dire qu’on ne pourra pas utiliser de boucles.
+Concrètement, ça veut par exemple dire qu’on arrive à se passer entièrement des boucles et qu'on les remplace par
+des fonctions.
 
 J’imagine que vous vous demandez comment on peut arriver à réaliser de vrais programmes sans boucles,
 mais ne vous inquiétez pas, il existe d’autres moyens de faire la même chose, juste avec des fonctions !

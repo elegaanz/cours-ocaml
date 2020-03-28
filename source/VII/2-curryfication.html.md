@@ -22,6 +22,8 @@ au type de la fonction `c`, et l’écrire comme ceci sans qu’il change : `int
 Ce qu’on met en évidence ici, c’est que `c` n’a qu’un argument de type `int`, et n’a qu’une valeur de retour
 de type `int -> int`. `c` renvoie une fonction !
 
+![Functions, functions everywhere](/images/functions-everywhere.jpg)
+
 Cette transformation d’une fonction qui en apparence a un type `int -> int -> int` en une fonction de type
 `int -> (int -> int)` est faite de manière transparente par OCaml pour nous. Ce processus s’appelle la curryfication,
 et apporte l’avantage de pouvoir faire des applications partielles.

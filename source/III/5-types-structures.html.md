@@ -56,7 +56,7 @@ Et comme on peut déconstruire ces valeurs, on peut aussi matcher dessus :
 
 ```ocaml
 let sappelle_manon (cont : contact) : bool =
-  match cont witt
+  match cont with
   | { prenom = "Manon" } -> true
   | _ -> false
 ```

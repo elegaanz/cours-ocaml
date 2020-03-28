@@ -43,7 +43,7 @@ On voit donc que cette fonction a un type elle aussi : `int -> int -> int`.
 Ce qu’il faut savoir sur cette notation, c’est que les premiers types sont ceux des arguments,
 et le dernier celui de la valeur de retour. Ici, les deux arguments `x` et `y` sont bien des `int`, et leur
 addition est bien un `int` aussi. Si vous voulez comprendre pourquoi cette notation qui semble peu intuitive
-a été choisie, vous pouvez lire la section bonus.
+a été choisie, on en reparlera [dans le chapitre sur la curryfication](/VII/2-curryfication).
 
 Une bonne pratique (c’est même demandé lors des examens à l’UGA), est de noter explicitement le type de ses fonctions.
 Pour cela, on utilise la syntaxe `(argument : type)` à la place de juste `argument`. Et pour la valeur de retour,
@@ -120,63 +120,5 @@ let norme (x : float) (y : float) : float =
   let y_carre = carre y in
   sqrt (x_carre + y_carre) (* sqrt est une fonction de base d’OCaml *)
 ```
-
-## Bonus : curryfication
-
-On va maintenant essayer de comprendre la notation `int -> int -> int` qu’on a vu tout à l’heure, quand on a
-voulu voir le type de la fonction `f`. Pour cela, voyons le type des fonctions suivantes :
-
-```ocaml
-let sans_argument = 0 (* int *)
-
-let un_argument x = x (* int -> int *)
-
-let deux_arguments x y = x + y (* int -> int -> int *)
-```
-
-Rien de bien nouveau. Mais maintenant, remarquez qu’on pourrait aussi noter le type de `deux_arguments` de cette façon :
-
-```ocaml
-let deux_arguments x y = x + y (* int -> (int -> int) *)
-```
-
-Cette notation et celle d’avant sont équivalentes. Mais celle-ci met en avant quelque chose de très important :
-`deux_arguments` prend en réalité un seul argument de type `int`, et renvoie une valeur de type `int -> int`.
-C’est donc une fonction qui renvoie une fonction !
-
-![Functions, functions everywhere](/images/functions-everywhere.jpg)
-
-Ce concept, qu’on appelle *curryfication*, nous permet d’écrire :
-
-```ocaml
-let ajouter x y = x + y
-ajouter 1 2 (* Donne bien 3 *)
-
-let ajouter_deux = ajouter 2 (* Remarquez qu’on ne donne qu’un argument à "ajouter" *)
-ajouter_deux 5 (* Donne bien 7 *)
-```
-
-L’intérêt peut sembler assez limité, mais cette abstraction est très puissante et très utile dès qu’on commence à réaliser de vrais programmes.
-
-Si vous avez du mal avec le concept de fonctions retournant des fonctions, voici un équivalent au code
-ci-dessus en Python (cet exemple marche totalement d’ailleurs, ce n’est pas une syntaxe hypothétique) :
-
-```python
-def ajouter(x):
-    def ajouter_bis(y): # Cette fonction est « cachée » en OCaml, mais bien présente
-        # Ici, on peut utiliser les arguments x et y !
-        return x + y
-
-    return ajouter_bis # "ajouter" renvoie une fonction ! On appelle pas "ajouter_bis", il n’y a pas de parenthèses
-
-ajouter(1)(2) # C’est là qu’on voit que la syntaxe d’OCaml est plus adaptée, en Python c’est… étrange
-
-ajouter_deux = ajouter(2) # ajouter_deux est une fonction
-ajouter_deux(5)
-```
-
-Si vous n’avez pas totalement compris cette dernière partie, ce n’est pas très grave. La curryfication n’est pas simple à
-saisir du premier coup, même si elle peut aider à mieux comprendre le fonctionnement d’OCaml. On y reviendra bien plus tard,
-dans [le chapitre VII](/VII/2-curryfication).
 
 [^refs]: En réalité, le concept de *référence* y correspond à peu près, mais on évite de l’utiliser, et nous n’en parlerons pas dans ce cours.

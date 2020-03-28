@@ -66,7 +66,7 @@ Maintenant, nous allons parler des types. Un **type** est une information sur un
 peut prendre. C’est un peu comme la notion d’ensemble en mathématiques.
 Vous avez sans doute déjà vu quelques types en Python, comme `int` ou, `float` ou `str`. En OCaml, on retrouve aussi des types,
 mais le système de type d’OCaml est bien plus avancé que celui de Python. Et en OCaml, toute expression a un type bien défini : on dit que
-c’est un langage *fortement typé*.
+c’est un langage *statiquement typé*.
 
 Tout ceci n’explique pas pourquoi additionner deux nombres à virgules donne une erreur. La raison est que l’opérateur `+` d’OCaml s’attend
 à trouver des expressions de type `int` des deux côtés, et pas autre chose. De même pour `-`, `*`, `/` et `mod`. Pour les flottants, on a des
