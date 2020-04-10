@@ -70,7 +70,7 @@ Donne la fin de la liste (`tl` signifie « tail », « queue »), autrement dit 
 Cette fonction aussi plante avec la liste vide.
 
 ```ocaml
-List.tl [ 42 ; 3 ; 87 ] (* Donne 87 *)
+List.tl [ 42 ; 3 ; 87 ] (* Donne [ 3 ; 87 ] *)
 ```
 
 ### nth
