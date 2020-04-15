@@ -12,7 +12,7 @@ Commençons par définir un arbre binaire générique :
 ```ocaml
 type 'a arbre_bin =
   | Fin
-  | Noeud of 'a * arbre_bin * arbre_bin
+  | Noeud of 'a * 'a arbre_bin * 'a arbre_bin
 ```
 
 Remarquez qu’ici on n’utilise pas des feuilles avec des valeurs, mais juste un
