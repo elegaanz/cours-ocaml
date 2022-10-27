@@ -35,7 +35,7 @@ Et enfin, sans doute ce qui va être le plus perturbant dans un premier temps : 
 avec des nombres flottants (les nombres à virgule). Si vous tapez ce calcul par exemple, vous aurez une erreur :
 
 ```ocaml
-(* À partir de maintenant, je n’écrirais plus les ;; mais pensez à les mettre si besoin *)
+(* À partir de maintenant, je n’écrirai plus les ;; mais pensez à les mettre si besoin *)
 2.8 + 0.2
 ```
 
