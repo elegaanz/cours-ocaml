@@ -2,9 +2,9 @@ require 'builder'
 
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
-activate :autoprefixer do |prefix|
-  prefix.browsers = "last 2 versions"
-end
+# activate :autoprefixer do |prefix|
+#  prefix.browsers = "last 2 versions"
+# end
 
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true, :tables => true, :footnotes => true
@@ -76,9 +76,9 @@ ready do
     prev_chap = if p >= 0 then pages[chaps[p]] else nil end
     next_chap = if n < chaps.size then pages[chaps[n]] else nil end
     j = 0
-    puts i
-    puts chaps[i]
-    puts pages
+    # puts i
+    # puts chaps[i]
+    # puts pages
     for p in pages[chaps[i]] do
       prev_page = if j == 0
                     if prev_chap == nil
@@ -107,6 +107,6 @@ ready do
 
   for p in sitemap.resources do
     p.data.chapters = chapters
-    puts p.data
+    # puts p.data
   end
 end

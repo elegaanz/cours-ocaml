@@ -157,3 +157,24 @@ summary {
         }
     }
 }
+
+.lat {
+    background: #BBFDAF; 
+    display: flex;
+    align-items: center;
+    
+    p {
+        flex: 1;
+        * {
+            display: block;
+        }
+    }
+
+    div a {
+        display: block;
+    }
+
+    img {
+        max-width: 10em;
+    }
+}
