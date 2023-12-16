@@ -45,7 +45,7 @@ type liste_nombres =
 Les types récursifs peuvent être parcourus avec une fonction récursive qui fait un `match` sur les contructeurs :
 
 ```ocaml
-let somme_elements (liste : liste_entier) : int =
+let rec somme_elements (liste : liste_entier) : int =
   match liste with
   | Vide -> 0
   | Element(x, reste) -> x + (somme_elements reste)
