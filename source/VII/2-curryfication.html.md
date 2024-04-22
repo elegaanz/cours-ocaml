@@ -1,6 +1,6 @@
 ---
 title: Curryfication
-description: "En OCaml, les fonctions peuvent être appliquées partiellement, on n’est pas obligé de donner tous les arguments d’un coup. Ce processus s’apelle la curryfication."
+description: "En OCaml, les fonctions peuvent être appliquées partiellement, on n’est pas obligé de donner tous les arguments d’un coup. Ce processus s’appelle la curryfication."
 illus: curry.webp
 ---
 
@@ -40,7 +40,7 @@ let d = c 10
 Ça fonctionne : `d` est bien de type `int -> int` ! C’est la même fonction que `c`, mais avec `x` valant
 forcément `10`. Le seul paramètre à donner est `y`. Par exemple `d 5` donnera `15` (10 + 5).
 
-On est donc pas obligé de donner tous les arguments d’une fonction à la fois : on peut l’appliquer partiellement !
+On n'est donc pas obligé de donner tous les arguments d’une fonction à la fois : on peut l’appliquer partiellement !
 
 Si vous voulez, voici le code équivalent en Python :
 

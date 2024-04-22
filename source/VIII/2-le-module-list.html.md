@@ -38,7 +38,7 @@ beaucoup d’autres cours en général).
 ### length
 
 ```ocaml
-List.lenght : 'a list -> int
+List.length : 'a list -> int
 ```
 
 Cette fonction prend une liste en paramètre, et renvoie sa taille.
@@ -79,7 +79,7 @@ List.tl [ 42 ; 3 ; 87 ] (* Donne [ 3 ; 87 ] *)
 List.nth : 'a list -> int -> 'a
 ```
 
-Donne le n-ième élément d’une liste. Si `n` est plus grand que la taille de la liste, on aura une erreur au moment
+Donne le n-ième élément d’une liste (attention l'indexation commence à 0). Si `n` est plus grand que la taille de la liste, on aura une erreur au moment
 de l’exécution.
 
 ```ocaml
