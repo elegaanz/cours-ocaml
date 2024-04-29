@@ -29,11 +29,11 @@ Voici un exemple :
 
 ```ocaml
 let manon = {
-  nom : "Sélon" ;
-  prenom : "Manon" ;
-  age : 18 ;
-  telephone : (06, 06, 66, 66, 06) ; (* C’est un faux, n’essayez pas de l’appeler, merci. *)
-  email : "manon.selon@gmail.com" ;
+  nom = "Sélon" ;
+  prenom = "Manon" ;
+  age = 18 ;
+  telephone = (06, 06, 66, 66, 06) ; (* C’est un faux, n’essayez pas de l’appeler, merci. *)
+  email = "manon.selon@gmail.com" ;
 }
 ```
 
